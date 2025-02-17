@@ -1,4 +1,4 @@
-//Legal Notice: (C)2024 Altera Corporation. All rights reserved.  Your
+//Legal Notice: (C)2025 Altera Corporation. All rights reserved.  Your
 //use of Altera Corporation's design tools, logic functions and other
 //software and tools, and its AMPP partner logic functions, and any
 //output files any of the foregoing (including device programming or
@@ -54,7 +54,7 @@ wire    [ 31: 0] readdata;
   always @(posedge clk or negedge reset_n)
     begin
       if (reset_n == 0)
-          data_out <= 0;
+          data_out <= 127;
       else if (chipselect && ~write_n && (address == 0))
           data_out <= writedata[6 : 0];
     end

@@ -1,8 +1,26 @@
 
 module soc_system (
-	button_pio_external_connection_export,
+	adc_0_sclk,
+	adc_0_cs_n,
+	adc_0_dout,
+	adc_0_din,
+	adder_a_export,
+	adder_b_export,
+	adder_sum_export,
+	alt_vip_itc_0_clocked_video_vid_clk,
+	alt_vip_itc_0_clocked_video_vid_data,
+	alt_vip_itc_0_clocked_video_underflow,
+	alt_vip_itc_0_clocked_video_vid_datavalid,
+	alt_vip_itc_0_clocked_video_vid_v_sync,
+	alt_vip_itc_0_clocked_video_vid_h_sync,
+	alt_vip_itc_0_clocked_video_vid_f,
+	alt_vip_itc_0_clocked_video_vid_h,
+	alt_vip_itc_0_clocked_video_vid_v,
+	button_pio_export,
 	clk_clk,
-	dipsw_pio_external_connection_export,
+	clk_130_clk,
+	ctrl_reg_export,
+	dipsw_pio_export,
 	hps_0_f2h_cold_reset_req_reset_n,
 	hps_0_f2h_debug_reset_req_reset_n,
 	hps_0_f2h_stm_hw_events_stm_hwevents,
@@ -56,7 +74,7 @@ module soc_system (
 	hps_0_hps_io_hps_io_gpio_inst_GPIO53,
 	hps_0_hps_io_hps_io_gpio_inst_GPIO54,
 	hps_0_hps_io_hps_io_gpio_inst_GPIO61,
-	led_pio_external_connection_export,
+	led_pio_export,
 	memory_mem_a,
 	memory_mem_ba,
 	memory_mem_ck,
@@ -73,14 +91,33 @@ module soc_system (
 	memory_mem_odt,
 	memory_mem_dm,
 	memory_oct_rzqin,
-	operand_a_export,
-	operand_b_export,
+	random_reg_export,
 	reset_reset_n,
-	result_export);	
+	uart_0_RXD,
+	uart_0_TXD,
+	reset_val_export);	
 
-	input	[1:0]	button_pio_external_connection_export;
+	output		adc_0_sclk;
+	output		adc_0_cs_n;
+	input		adc_0_dout;
+	output		adc_0_din;
+	output	[63:0]	adder_a_export;
+	output	[63:0]	adder_b_export;
+	input	[63:0]	adder_sum_export;
+	input		alt_vip_itc_0_clocked_video_vid_clk;
+	output	[31:0]	alt_vip_itc_0_clocked_video_vid_data;
+	output		alt_vip_itc_0_clocked_video_underflow;
+	output		alt_vip_itc_0_clocked_video_vid_datavalid;
+	output		alt_vip_itc_0_clocked_video_vid_v_sync;
+	output		alt_vip_itc_0_clocked_video_vid_h_sync;
+	output		alt_vip_itc_0_clocked_video_vid_f;
+	output		alt_vip_itc_0_clocked_video_vid_h;
+	output		alt_vip_itc_0_clocked_video_vid_v;
+	input	[1:0]	button_pio_export;
 	input		clk_clk;
-	input	[3:0]	dipsw_pio_external_connection_export;
+	input		clk_130_clk;
+	output	[1:0]	ctrl_reg_export;
+	input	[3:0]	dipsw_pio_export;
 	input		hps_0_f2h_cold_reset_req_reset_n;
 	input		hps_0_f2h_debug_reset_req_reset_n;
 	input	[27:0]	hps_0_f2h_stm_hw_events_stm_hwevents;
@@ -134,7 +171,7 @@ module soc_system (
 	inout		hps_0_hps_io_hps_io_gpio_inst_GPIO53;
 	inout		hps_0_hps_io_hps_io_gpio_inst_GPIO54;
 	inout		hps_0_hps_io_hps_io_gpio_inst_GPIO61;
-	output	[6:0]	led_pio_external_connection_export;
+	output	[6:0]	led_pio_export;
 	output	[14:0]	memory_mem_a;
 	output	[2:0]	memory_mem_ba;
 	output		memory_mem_ck;
@@ -151,8 +188,9 @@ module soc_system (
 	output		memory_mem_odt;
 	output	[3:0]	memory_mem_dm;
 	input		memory_oct_rzqin;
-	output	[63:0]	operand_a_export;
-	output	[63:0]	operand_b_export;
+	input	[31:0]	random_reg_export;
 	input		reset_reset_n;
-	input	[63:0]	result_export;
+	input		uart_0_RXD;
+	output		uart_0_TXD;
+	output	[31:0]	reset_val_export;
 endmodule

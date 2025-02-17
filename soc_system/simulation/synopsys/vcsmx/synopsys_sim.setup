@@ -28,6 +28,8 @@ hps_0:                            ./libraries/hps_0/
 f2sdram_only_master:              ./libraries/f2sdram_only_master/             
 dipsw_pio:                        ./libraries/dipsw_pio/                       
 button_pio:                       ./libraries/button_pio/                      
+alt_vip_vfr_hdmi:                 ./libraries/alt_vip_vfr_hdmi/                
+alt_vip_itc_0:                    ./libraries/alt_vip_itc_0/                   
 ILC:                              ./libraries/ILC/                             
 altera_ver:                       ./libraries/altera_ver/                      
 lpm_ver:                          ./libraries/lpm_ver/                         

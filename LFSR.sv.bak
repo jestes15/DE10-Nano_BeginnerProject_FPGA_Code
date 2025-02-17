@@ -1,0 +1,25 @@
+module LFSR (
+	input pulse, rst,
+	output [31:0] rng
+	);
+	
+	reg [31:0] temp;
+	
+	wire feedback;
+	
+	always @(posedge pulse or negedge rst) begin
+		if (!rst) begin
+			temp <= 32'h3FF0FF01;
+		end
+		else begin
+			temp <= temp << 1;
+			temp[0] 	<= temp[31] ^ temp[23] ^ temp[14] ^ temp[10];
+			temp[8] 	<= temp[28] ^ temp[18] ^ temp[12] ^ temp[3];
+			temp[16] <= temp[29] ^ temp[22] ^ temp[11] ^ temp[6];
+			temp[24] <= temp[26] ^ temp[21] ^ temp[13] ^ temp[5];
+		end
+	end
+	
+	assign rng = temp;
+	
+endmodule

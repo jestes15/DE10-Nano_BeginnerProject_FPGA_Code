@@ -35,6 +35,8 @@ DEFINE hps_0                            ./libraries/hps_0/
 DEFINE f2sdram_only_master              ./libraries/f2sdram_only_master/             
 DEFINE dipsw_pio                        ./libraries/dipsw_pio/                       
 DEFINE button_pio                       ./libraries/button_pio/                      
+DEFINE alt_vip_vfr_hdmi                 ./libraries/alt_vip_vfr_hdmi/                
+DEFINE alt_vip_itc_0                    ./libraries/alt_vip_itc_0/                   
 DEFINE ILC                              ./libraries/ILC/                             
 DEFINE altera_ver                       ./libraries/altera_ver/                      
 DEFINE lpm_ver                          ./libraries/lpm_ver/                         

@@ -37,8 +37,8 @@ module soc_system_hps_0_fpga_interfaces
    output wire [  0:  0] f2h_AWREADY,
    input  wire [  4:  0] f2h_AWUSER,
    input  wire [  7:  0] f2h_WID,
-   input  wire [ 63:  0] f2h_WDATA,
-   input  wire [  7:  0] f2h_WSTRB,
+   input  wire [127:  0] f2h_WDATA,
+   input  wire [ 15:  0] f2h_WSTRB,
    input  wire [  0:  0] f2h_WLAST,
    input  wire [  0:  0] f2h_WVALID,
    output wire [  0:  0] f2h_WREADY,
@@ -58,7 +58,7 @@ module soc_system_hps_0_fpga_interfaces
    output wire [  0:  0] f2h_ARREADY,
    input  wire [  4:  0] f2h_ARUSER,
    output wire [  7:  0] f2h_RID,
-   output wire [ 63:  0] f2h_RDATA,
+   output wire [127:  0] f2h_RDATA,
    output wire [  1:  0] f2h_RRESP,
    output wire [  0:  0] f2h_RLAST,
    output wire [  0:  0] f2h_RVALID,
@@ -165,8 +165,8 @@ module soc_system_hps_0_fpga_interfaces
    mgc_axi_slave #(
       .AXI_ID_WIDTH(8),
       .AXI_ADDRESS_WIDTH(32),
-      .AXI_WDATA_WIDTH(64),
-      .AXI_RDATA_WIDTH(64),
+      .AXI_WDATA_WIDTH(128),
+      .AXI_RDATA_WIDTH(128),
       .index(0)
    ) f2h_axi_slave_inst (
       .ARSIZE(f2h_ARSIZE),

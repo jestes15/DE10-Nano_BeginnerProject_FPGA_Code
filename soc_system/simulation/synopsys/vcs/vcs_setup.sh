@@ -1,5 +1,5 @@
 
-# (C) 2001-2024 Altera Corporation. All rights reserved.
+# (C) 2001-2025 Altera Corporation. All rights reserved.
 # Your use of Altera Corporation's design tools, logic functions and 
 # other software and tools, and its AMPP partner logic functions, and 
 # any output files any of the foregoing (including device programming 
@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 linux 2024.09.29.01:37:45
+# ACDS 18.1 625 win32 2025.01.19.00:35:19
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -94,12 +94,12 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 linux 2024.09.29.01:37:45
+# ACDS 18.1 625 win32 2025.01.19.00:35:19
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="soc_system"
 QSYS_SIMDIR="./../../"
-QUARTUS_INSTALL_DIR="/home/bl4z3/apps/intelFPGA_lte/18.1/quartus/"
+QUARTUS_INSTALL_DIR="C:/intelfpga/18.1/quartus/"
 SKIP_FILE_COPY=0
 SKIP_SIM=0
 USER_DEFINED_ELAB_OPTIONS=""
@@ -130,8 +130,8 @@ fi
 # ----------------------------------------
 # copy RAM/ROM files to simulation directory
 if [ $SKIP_FILE_COPY -eq 0 ]; then
-  cp -f $QSYS_SIMDIR/submodules/hps_inst_ROM.hex ./
   cp -f $QSYS_SIMDIR/submodules/hps_AC_ROM.hex ./
+  cp -f $QSYS_SIMDIR/submodules/hps_inst_ROM.hex ./
 fi
 
 vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS \
@@ -151,60 +151,60 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/submodules/avalon_utilities_pkg.sv \
   $QSYS_SIMDIR/submodules/avalon_mm_pkg.sv \
   $QSYS_SIMDIR/submodules/hps_sdram.v \
-  $QSYS_SIMDIR/submodules/hps_sdram_p0_clock_pair_generator.v \
-  $QSYS_SIMDIR/submodules/hps_sdram_p0_acv_hard_memphy.v \
-  $QSYS_SIMDIR/submodules/altera_avalon_clock_source.sv \
-  $QSYS_SIMDIR/submodules/hps_sdram_p0_acv_hard_io_pads.v \
-  $QSYS_SIMDIR/submodules/hps_sdram_pll.sv \
-  $QSYS_SIMDIR/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v \
-  $QSYS_SIMDIR/submodules/hps_sdram_p0_reset.v \
-  $QSYS_SIMDIR/submodules/hps_sdram_p0_phy_csr.sv \
-  $QSYS_SIMDIR/submodules/altera_avalon_reset_source.sv \
-  $QSYS_SIMDIR/submodules/hps_sdram_p0.sv \
-  $QSYS_SIMDIR/submodules/altera_mem_if_hhp_qseq_top.v \
   $QSYS_SIMDIR/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv \
-  $QSYS_SIMDIR/submodules/hps_sdram_p0_reset_sync.v \
+  $QSYS_SIMDIR/submodules/altera_avalon_clock_source.sv \
+  $QSYS_SIMDIR/submodules/altera_avalon_reset_source.sv \
+  $QSYS_SIMDIR/submodules/altera_mem_if_hhp_qseq_top.v \
+  $QSYS_SIMDIR/submodules/hps_sdram_p0.sv \
+  $QSYS_SIMDIR/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v \
+  $QSYS_SIMDIR/submodules/hps_sdram_p0_acv_hard_io_pads.v \
+  $QSYS_SIMDIR/submodules/hps_sdram_p0_acv_hard_memphy.v \
   $QSYS_SIMDIR/submodules/hps_sdram_p0_acv_ldc.v \
+  $QSYS_SIMDIR/submodules/hps_sdram_p0_altdqdqs.v \
+  $QSYS_SIMDIR/submodules/hps_sdram_p0_clock_pair_generator.v \
   $QSYS_SIMDIR/submodules/hps_sdram_p0_generic_ddio.v \
   $QSYS_SIMDIR/submodules/hps_sdram_p0_iss_probe.v \
-  $QSYS_SIMDIR/submodules/hps_sdram_p0_altdqdqs.v \
-  $QSYS_SIMDIR/submodules/seq_lib/alt_mem_ddrx_fifo.v \
-  $QSYS_SIMDIR/submodules/seq_lib/hmctl_synchronizer.v \
-  $QSYS_SIMDIR/submodules/seq_lib/alt_mem_ddrx_buffer.v \
-  $QSYS_SIMDIR/submodules/seq/seq_rsp_xbar_demux.v \
-  $QSYS_SIMDIR/submodules/seq/seq_altera_avalon_st_pipeline_base.v \
-  $QSYS_SIMDIR/submodules/seq/seq_hhp_decompress_avl_mm_bridge.v \
-  $QSYS_SIMDIR/submodules/seq/seq_altera_mem_if_simple_avalon_mm_bridge.v \
+  $QSYS_SIMDIR/submodules/hps_sdram_p0_phy_csr.sv \
+  $QSYS_SIMDIR/submodules/hps_sdram_p0_reset.v \
+  $QSYS_SIMDIR/submodules/hps_sdram_p0_reset_sync.v \
+  $QSYS_SIMDIR/submodules/hps_sdram_pll.sv \
   $QSYS_SIMDIR/submodules/seq/seq.v \
-  $QSYS_SIMDIR/submodules/seq/seq_altera_merlin_slave_translator.v \
-  $QSYS_SIMDIR/submodules/seq/seq_altera_merlin_arb_adder.v \
-  $QSYS_SIMDIR/submodules/seq/seq_altera_merlin_burst_uncompressor.v \
-  $QSYS_SIMDIR/submodules/seq/seq_scc_mgr.v \
-  $QSYS_SIMDIR/submodules/seq/seq_scc_reg_file.v \
+  $QSYS_SIMDIR/submodules/seq/seq_addr_router.v \
+  $QSYS_SIMDIR/submodules/seq/seq_addr_router_001.v \
+  $QSYS_SIMDIR/submodules/seq/seq_addr_router_001_default_decode.v \
+  $QSYS_SIMDIR/submodules/seq/seq_addr_router_default_decode.v \
   $QSYS_SIMDIR/submodules/seq/seq_altera_avalon_dc_fifo.v \
   $QSYS_SIMDIR/submodules/seq/seq_altera_avalon_mm_bridge.v \
-  $QSYS_SIMDIR/submodules/seq/seq_addr_router_default_decode.v \
   $QSYS_SIMDIR/submodules/seq/seq_altera_avalon_mm_clock_crossing_bridge.v \
-  $QSYS_SIMDIR/submodules/seq/seq_scc_hhp_phase_decode.v \
-  $QSYS_SIMDIR/submodules/seq/seq_altera_merlin_master_agent.v \
-  $QSYS_SIMDIR/submodules/seq/seq_altera_merlin_traffic_limiter.v \
-  $QSYS_SIMDIR/submodules/seq/seq_reg_file.v \
-  $QSYS_SIMDIR/submodules/seq/seq_cmd_xbar_demux_001.v \
-  $QSYS_SIMDIR/submodules/seq/seq_addr_router.v \
-  $QSYS_SIMDIR/submodules/seq/seq_altera_merlin_slave_agent.v \
-  $QSYS_SIMDIR/submodules/seq/seq_rsp_xbar_mux.v \
-  $QSYS_SIMDIR/submodules/seq/seq_cmd_xbar_demux.v \
-  $QSYS_SIMDIR/submodules/seq/seq_cmd_xbar_mux.v \
-  $QSYS_SIMDIR/submodules/seq/seq_altera_merlin_master_translator.v \
-  $QSYS_SIMDIR/submodules/seq/seq_id_router.v \
   $QSYS_SIMDIR/submodules/seq/seq_altera_avalon_sc_fifo.v \
-  $QSYS_SIMDIR/submodules/seq/seq_trk_mgr.v \
-  $QSYS_SIMDIR/submodules/seq/seq_altera_merlin_arbitrator.v \
-  $QSYS_SIMDIR/submodules/seq/seq_addr_router_001.v \
-  $QSYS_SIMDIR/submodules/seq/seq_scc_hhp_wrapper.v \
-  $QSYS_SIMDIR/submodules/seq/seq_addr_router_001_default_decode.v \
-  $QSYS_SIMDIR/submodules/seq/seq_id_router_default_decode.v \
+  $QSYS_SIMDIR/submodules/seq/seq_altera_avalon_st_pipeline_base.v \
   $QSYS_SIMDIR/submodules/seq/seq_altera_hhp_apb2avalon_bridge.v \
+  $QSYS_SIMDIR/submodules/seq/seq_altera_mem_if_simple_avalon_mm_bridge.v \
+  $QSYS_SIMDIR/submodules/seq/seq_altera_merlin_arbitrator.v \
+  $QSYS_SIMDIR/submodules/seq/seq_altera_merlin_arb_adder.v \
+  $QSYS_SIMDIR/submodules/seq/seq_altera_merlin_burst_uncompressor.v \
+  $QSYS_SIMDIR/submodules/seq/seq_altera_merlin_master_agent.v \
+  $QSYS_SIMDIR/submodules/seq/seq_altera_merlin_master_translator.v \
+  $QSYS_SIMDIR/submodules/seq/seq_altera_merlin_slave_agent.v \
+  $QSYS_SIMDIR/submodules/seq/seq_altera_merlin_slave_translator.v \
+  $QSYS_SIMDIR/submodules/seq/seq_altera_merlin_traffic_limiter.v \
+  $QSYS_SIMDIR/submodules/seq/seq_cmd_xbar_demux.v \
+  $QSYS_SIMDIR/submodules/seq/seq_cmd_xbar_demux_001.v \
+  $QSYS_SIMDIR/submodules/seq/seq_cmd_xbar_mux.v \
+  $QSYS_SIMDIR/submodules/seq/seq_hhp_decompress_avl_mm_bridge.v \
+  $QSYS_SIMDIR/submodules/seq/seq_id_router.v \
+  $QSYS_SIMDIR/submodules/seq/seq_id_router_default_decode.v \
+  $QSYS_SIMDIR/submodules/seq/seq_reg_file.v \
+  $QSYS_SIMDIR/submodules/seq/seq_rsp_xbar_demux.v \
+  $QSYS_SIMDIR/submodules/seq/seq_rsp_xbar_mux.v \
+  $QSYS_SIMDIR/submodules/seq/seq_scc_hhp_phase_decode.v \
+  $QSYS_SIMDIR/submodules/seq/seq_scc_hhp_wrapper.v \
+  $QSYS_SIMDIR/submodules/seq/seq_scc_mgr.v \
+  $QSYS_SIMDIR/submodules/seq/seq_scc_reg_file.v \
+  $QSYS_SIMDIR/submodules/seq/seq_trk_mgr.v \
+  $QSYS_SIMDIR/submodules/seq_lib/alt_mem_ddrx_buffer.v \
+  $QSYS_SIMDIR/submodules/seq_lib/alt_mem_ddrx_fifo.v \
+  $QSYS_SIMDIR/submodules/seq_lib/hmctl_synchronizer.v \
   $QSYS_SIMDIR/submodules/altera_avalon_mm_slave_bfm.sv \
   $QSYS_SIMDIR/submodules/questa_mvc_svapi.svh \
   $QSYS_SIMDIR/submodules/mgc_common_axi.sv \
@@ -250,6 +250,21 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/submodules/soc_system_f2sdram_only_master.v \
   $QSYS_SIMDIR/submodules/soc_system_dipsw_pio.v \
   $QSYS_SIMDIR/submodules/soc_system_button_pio.v \
+  $QSYS_SIMDIR/submodules/soc_system_alt_vip_vfr_hdmi.vo \
+  $QSYS_SIMDIR/submodules/alt_vipitc131_IS2Vid.sv \
+  $QSYS_SIMDIR/submodules/alt_vipitc131_IS2Vid_sync_compare.v \
+  $QSYS_SIMDIR/submodules/alt_vipitc131_IS2Vid_calculate_mode.v \
+  $QSYS_SIMDIR/submodules/alt_vipitc131_IS2Vid_control.v \
+  $QSYS_SIMDIR/submodules/alt_vipitc131_IS2Vid_mode_banks.sv \
+  $QSYS_SIMDIR/submodules/alt_vipitc131_IS2Vid_statemachine.v \
+  $QSYS_SIMDIR/submodules/alt_vipitc131_common_fifo.v \
+  $QSYS_SIMDIR/submodules/alt_vipitc131_common_generic_count.v \
+  $QSYS_SIMDIR/submodules/alt_vipitc131_common_to_binary.v \
+  $QSYS_SIMDIR/submodules/alt_vipitc131_common_sync.v \
+  $QSYS_SIMDIR/submodules/alt_vipitc131_common_trigger_sync.v \
+  $QSYS_SIMDIR/submodules/alt_vipitc131_common_sync_generation.v \
+  $QSYS_SIMDIR/submodules/alt_vipitc131_common_frame_counter.v \
+  $QSYS_SIMDIR/submodules/alt_vipitc131_common_sample_counter.v \
   $QSYS_SIMDIR/submodules/interrupt_latency_counter.v \
   $QSYS_SIMDIR/submodules/irq_detector.v \
   $QSYS_SIMDIR/submodules/state_machine_counter.v \

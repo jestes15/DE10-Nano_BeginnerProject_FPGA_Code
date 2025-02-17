@@ -20,47 +20,11 @@
    type="VERILOG"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/hps_sdram_p0_clock_pair_generator.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/hps_sdram_p0_acv_hard_memphy.v"
-   type="VERILOG"
+   path="simulation/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv"
+   type="SYSTEM_VERILOG"
    library="fpga_interfaces" />
  <file
    path="simulation/submodules/altera_avalon_clock_source.sv"
-   type="SYSTEM_VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/hps_software/sequencer_defines.h"
-   type="OTHER"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/hps_software/sequencer.h"
-   type="OTHER"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/hps_software/sequencer.c"
-   type="OTHER"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/hps_sdram_p0_acv_hard_io_pads.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/hps_sdram_pll.sv"
-   type="SYSTEM_VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/hps_sdram_p0_reset.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/hps_sdram_p0_phy_csr.sv"
    type="SYSTEM_VERILOG"
    library="fpga_interfaces" />
  <file
@@ -68,27 +32,43 @@
    type="SYSTEM_VERILOG"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/hps_sdram_p0.sv"
-   type="SYSTEM_VERILOG"
-   library="fpga_interfaces" />
- <file
    path="simulation/submodules/altera_mem_if_hhp_qseq_top.v"
    type="VERILOG"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv"
-   type="SYSTEM_VERILOG"
+   path="simulation/submodules/hps_AC_ROM.hex"
+   type="HEX"
    library="fpga_interfaces" />
  <file
    path="simulation/submodules/hps_inst_ROM.hex"
    type="HEX"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/hps_sdram_p0_reset_sync.v"
+   path="simulation/submodules/hps_sdram_p0.sv"
+   type="SYSTEM_VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/hps_sdram_p0_acv_hard_io_pads.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/hps_sdram_p0_acv_hard_memphy.v"
    type="VERILOG"
    library="fpga_interfaces" />
  <file
    path="simulation/submodules/hps_sdram_p0_acv_ldc.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/hps_sdram_p0_altdqdqs.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/hps_sdram_p0_clock_pair_generator.v"
    type="VERILOG"
    library="fpga_interfaces" />
  <file
@@ -100,63 +80,51 @@
    type="VERILOG"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/hps_sdram_p0_altdqdqs.v"
+   path="simulation/submodules/hps_sdram_p0_phy_csr.sv"
+   type="SYSTEM_VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/hps_sdram_p0_reset.v"
    type="VERILOG"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/seq_lib/alt_mem_ddrx_fifo.v"
+   path="simulation/submodules/hps_sdram_p0_reset_sync.v"
    type="VERILOG"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/seq_lib/hmctl_synchronizer.v"
-   type="VERILOG"
+   path="simulation/submodules/hps_sdram_pll.sv"
+   type="SYSTEM_VERILOG"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/seq_lib/alt_mem_ddrx_buffer.v"
-   type="VERILOG"
+   path="simulation/submodules/hps_software/sequencer.c"
+   type="OTHER"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/hps_AC_ROM.hex"
-   type="HEX"
+   path="simulation/submodules/hps_software/sequencer.h"
+   type="OTHER"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/seq/seq_rsp_xbar_demux.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/seq/seq_altera_avalon_st_pipeline_base.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/seq/seq_hhp_decompress_avl_mm_bridge.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/seq/seq_altera_mem_if_simple_avalon_mm_bridge.v"
-   type="VERILOG"
+   path="simulation/submodules/hps_software/sequencer_defines.h"
+   type="OTHER"
    library="fpga_interfaces" />
  <file
    path="simulation/submodules/seq/seq.v"
    type="VERILOG"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/seq/seq_altera_merlin_slave_translator.v"
+   path="simulation/submodules/seq/seq_addr_router.v"
    type="VERILOG"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/seq/seq_altera_merlin_arb_adder.v"
+   path="simulation/submodules/seq/seq_addr_router_001.v"
    type="VERILOG"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/seq/seq_altera_merlin_burst_uncompressor.v"
+   path="simulation/submodules/seq/seq_addr_router_001_default_decode.v"
    type="VERILOG"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/seq/seq_scc_mgr.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/seq/seq_scc_reg_file.v"
+   path="simulation/submodules/seq/seq_addr_router_default_decode.v"
    type="VERILOG"
    library="fpga_interfaces" />
  <file
@@ -168,59 +136,7 @@
    type="VERILOG"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/seq/seq_addr_router_default_decode.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
    path="simulation/submodules/seq/seq_altera_avalon_mm_clock_crossing_bridge.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/seq/seq_scc_hhp_phase_decode.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/seq/seq_altera_merlin_master_agent.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/seq/seq_altera_merlin_traffic_limiter.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/seq/seq_reg_file.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/seq/seq_cmd_xbar_demux_001.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/seq/seq_addr_router.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/seq/seq_altera_merlin_slave_agent.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/seq/seq_rsp_xbar_mux.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/seq/seq_cmd_xbar_demux.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/seq/seq_cmd_xbar_mux.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/seq/seq_altera_merlin_master_translator.v"
-   type="VERILOG"
-   library="fpga_interfaces" />
- <file
-   path="simulation/submodules/seq/seq_id_router.v"
    type="VERILOG"
    library="fpga_interfaces" />
  <file
@@ -228,7 +144,15 @@
    type="VERILOG"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/seq/seq_trk_mgr.v"
+   path="simulation/submodules/seq/seq_altera_avalon_st_pipeline_base.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq/seq_altera_hhp_apb2avalon_bridge.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq/seq_altera_mem_if_simple_avalon_mm_bridge.v"
    type="VERILOG"
    library="fpga_interfaces" />
  <file
@@ -236,15 +160,51 @@
    type="VERILOG"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/seq/seq_addr_router_001.v"
+   path="simulation/submodules/seq/seq_altera_merlin_arb_adder.v"
    type="VERILOG"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/seq/seq_scc_hhp_wrapper.v"
+   path="simulation/submodules/seq/seq_altera_merlin_burst_uncompressor.v"
    type="VERILOG"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/seq/seq_addr_router_001_default_decode.v"
+   path="simulation/submodules/seq/seq_altera_merlin_master_agent.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq/seq_altera_merlin_master_translator.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq/seq_altera_merlin_slave_agent.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq/seq_altera_merlin_slave_translator.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq/seq_altera_merlin_traffic_limiter.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq/seq_cmd_xbar_demux.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq/seq_cmd_xbar_demux_001.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq/seq_cmd_xbar_mux.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq/seq_hhp_decompress_avl_mm_bridge.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq/seq_id_router.v"
    type="VERILOG"
    library="fpga_interfaces" />
  <file
@@ -252,7 +212,47 @@
    type="VERILOG"
    library="fpga_interfaces" />
  <file
-   path="simulation/submodules/seq/seq_altera_hhp_apb2avalon_bridge.v"
+   path="simulation/submodules/seq/seq_reg_file.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq/seq_rsp_xbar_demux.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq/seq_rsp_xbar_mux.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq/seq_scc_hhp_phase_decode.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq/seq_scc_hhp_wrapper.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq/seq_scc_mgr.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq/seq_scc_reg_file.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq/seq_trk_mgr.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq_lib/alt_mem_ddrx_buffer.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq_lib/alt_mem_ddrx_fifo.v"
+   type="VERILOG"
+   library="fpga_interfaces" />
+ <file
+   path="simulation/submodules/seq_lib/hmctl_synchronizer.v"
    type="VERILOG"
    library="fpga_interfaces" />
  <file
@@ -443,6 +443,66 @@
    path="simulation/submodules/soc_system_button_pio.v"
    type="VERILOG"
    library="button_pio" />
+ <file
+   path="simulation/submodules/soc_system_alt_vip_vfr_hdmi.vo"
+   type="VERILOG"
+   library="alt_vip_vfr_hdmi" />
+ <file
+   path="simulation/submodules/alt_vipitc131_IS2Vid.sv"
+   type="SYSTEM_VERILOG"
+   library="alt_vip_itc_0" />
+ <file
+   path="simulation/submodules/alt_vipitc131_IS2Vid_sync_compare.v"
+   type="VERILOG"
+   library="alt_vip_itc_0" />
+ <file
+   path="simulation/submodules/alt_vipitc131_IS2Vid_calculate_mode.v"
+   type="VERILOG"
+   library="alt_vip_itc_0" />
+ <file
+   path="simulation/submodules/alt_vipitc131_IS2Vid_control.v"
+   type="VERILOG"
+   library="alt_vip_itc_0" />
+ <file
+   path="simulation/submodules/alt_vipitc131_IS2Vid_mode_banks.sv"
+   type="SYSTEM_VERILOG"
+   library="alt_vip_itc_0" />
+ <file
+   path="simulation/submodules/alt_vipitc131_IS2Vid_statemachine.v"
+   type="VERILOG"
+   library="alt_vip_itc_0" />
+ <file
+   path="simulation/submodules/alt_vipitc131_common_fifo.v"
+   type="VERILOG"
+   library="alt_vip_itc_0" />
+ <file
+   path="simulation/submodules/alt_vipitc131_common_generic_count.v"
+   type="VERILOG"
+   library="alt_vip_itc_0" />
+ <file
+   path="simulation/submodules/alt_vipitc131_common_to_binary.v"
+   type="VERILOG"
+   library="alt_vip_itc_0" />
+ <file
+   path="simulation/submodules/alt_vipitc131_common_sync.v"
+   type="VERILOG"
+   library="alt_vip_itc_0" />
+ <file
+   path="simulation/submodules/alt_vipitc131_common_trigger_sync.v"
+   type="VERILOG"
+   library="alt_vip_itc_0" />
+ <file
+   path="simulation/submodules/alt_vipitc131_common_sync_generation.v"
+   type="VERILOG"
+   library="alt_vip_itc_0" />
+ <file
+   path="simulation/submodules/alt_vipitc131_common_frame_counter.v"
+   type="VERILOG"
+   library="alt_vip_itc_0" />
+ <file
+   path="simulation/submodules/alt_vipitc131_common_sample_counter.v"
+   type="VERILOG"
+   library="alt_vip_itc_0" />
  <file
    path="simulation/submodules/interrupt_latency_counter.v"
    type="VERILOG"
