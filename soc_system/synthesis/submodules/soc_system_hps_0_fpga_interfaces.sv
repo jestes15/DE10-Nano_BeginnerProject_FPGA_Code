@@ -20,6 +20,10 @@ module soc_system_hps_0_fpga_interfaces(
  ,input wire [1 - 1 : 0 ] f2h_dbg_rst_req_n
 // f2h_warm_reset_req
  ,input wire [1 - 1 : 0 ] f2h_warm_rst_req_n
+// h2f_user0_clock
+ ,output wire [1 - 1 : 0 ] h2f_user0_clk
+// h2f_user1_clock
+ ,output wire [1 - 1 : 0 ] h2f_user1_clk
 // f2h_stm_hw_events
  ,input wire [28 - 1 : 0 ] f2h_stm_hwevents
 // f2h_axi_clock
@@ -157,6 +161,42 @@ module soc_system_hps_0_fpga_interfaces(
  ,input wire [32 - 1 : 0 ] f2h_irq_p0
 // f2h_irq1
  ,input wire [32 - 1 : 0 ] f2h_irq_p1
+// spim0
+ ,output wire [1 - 1 : 0 ] spim0_txd
+ ,input wire [1 - 1 : 0 ] spim0_rxd
+ ,input wire [1 - 1 : 0 ] spim0_ss_in_n
+ ,output wire [1 - 1 : 0 ] spim0_ssi_oe_n
+ ,output wire [1 - 1 : 0 ] spim0_ss_0_n
+ ,output wire [1 - 1 : 0 ] spim0_ss_1_n
+ ,output wire [1 - 1 : 0 ] spim0_ss_2_n
+ ,output wire [1 - 1 : 0 ] spim0_ss_3_n
+// spim0_sclk_out
+ ,output wire [1 - 1 : 0 ] spim0_sclk_out
+// uart1
+ ,input wire [1 - 1 : 0 ] uart1_cts
+ ,input wire [1 - 1 : 0 ] uart1_dsr
+ ,input wire [1 - 1 : 0 ] uart1_dcd
+ ,input wire [1 - 1 : 0 ] uart1_ri
+ ,output wire [1 - 1 : 0 ] uart1_dtr
+ ,output wire [1 - 1 : 0 ] uart1_rts
+ ,output wire [1 - 1 : 0 ] uart1_out1_n
+ ,output wire [1 - 1 : 0 ] uart1_out2_n
+ ,input wire [1 - 1 : 0 ] uart1_rxd
+ ,output wire [1 - 1 : 0 ] uart1_txd
+// i2c2_scl_in
+ ,input wire [1 - 1 : 0 ] i2c_emac0_scl
+// i2c2_clk
+ ,output wire [1 - 1 : 0 ] i2c_emac0_out_clk
+// i2c2
+ ,output wire [1 - 1 : 0 ] i2c_emac0_out_data
+ ,input wire [1 - 1 : 0 ] i2c_emac0_sda
+// i2c3_scl_in
+ ,input wire [1 - 1 : 0 ] i2c_emac1_scl
+// i2c3_clk
+ ,output wire [1 - 1 : 0 ] i2c_emac1_out_clk
+// i2c3
+ ,output wire [1 - 1 : 0 ] i2c_emac1_out_data
+ ,input wire [1 - 1 : 0 ] i2c_emac1_sda
 );
 
 
@@ -190,8 +230,14 @@ cyclonev_hps_interface_clocks_resets clocks_resets(
 ,.h2f_rst_n({
     h2f_rst_n[0:0] // 0:0
   })
+,.h2f_user1_clk({
+    h2f_user1_clk[0:0] // 0:0
+  })
 ,.f2h_cold_rst_req_n({
     f2h_cold_rst_req_n[0:0] // 0:0
+  })
+,.h2f_user0_clk({
+    h2f_user0_clk[0:0] // 0:0
   })
 );
 
@@ -723,6 +769,103 @@ cyclonev_hps_interface_interrupts interrupts(
  .irq({
     f2h_irq_p1[31:0] // 63:32
    ,f2h_irq_p0[31:0] // 31:0
+  })
+);
+
+
+cyclonev_hps_interface_peripheral_spi_master peripheral_spim0(
+ .ss_0_n({
+    spim0_ss_0_n[0:0] // 0:0
+  })
+,.txd({
+    spim0_txd[0:0] // 0:0
+  })
+,.ss_in_n({
+    spim0_ss_in_n[0:0] // 0:0
+  })
+,.ss_1_n({
+    spim0_ss_1_n[0:0] // 0:0
+  })
+,.sclk_out({
+    spim0_sclk_out[0:0] // 0:0
+  })
+,.ss_2_n({
+    spim0_ss_2_n[0:0] // 0:0
+  })
+,.rxd({
+    spim0_rxd[0:0] // 0:0
+  })
+,.ss_3_n({
+    spim0_ss_3_n[0:0] // 0:0
+  })
+,.ssi_oe_n({
+    spim0_ssi_oe_n[0:0] // 0:0
+  })
+);
+
+
+cyclonev_hps_interface_peripheral_uart peripheral_uart1(
+ .txd({
+    uart1_txd[0:0] // 0:0
+  })
+,.cts({
+    uart1_cts[0:0] // 0:0
+  })
+,.out1_n({
+    uart1_out1_n[0:0] // 0:0
+  })
+,.dtr({
+    uart1_dtr[0:0] // 0:0
+  })
+,.rts({
+    uart1_rts[0:0] // 0:0
+  })
+,.out2_n({
+    uart1_out2_n[0:0] // 0:0
+  })
+,.rxd({
+    uart1_rxd[0:0] // 0:0
+  })
+,.ri({
+    uart1_ri[0:0] // 0:0
+  })
+,.dsr({
+    uart1_dsr[0:0] // 0:0
+  })
+,.dcd({
+    uart1_dcd[0:0] // 0:0
+  })
+);
+
+
+cyclonev_hps_interface_peripheral_i2c peripheral_i2c2(
+ .out_clk({
+    i2c_emac0_out_clk[0:0] // 0:0
+  })
+,.scl({
+    i2c_emac0_scl[0:0] // 0:0
+  })
+,.sda({
+    i2c_emac0_sda[0:0] // 0:0
+  })
+,.out_data({
+    i2c_emac0_out_data[0:0] // 0:0
+  })
+);
+
+
+cyclonev_hps_interface_peripheral_i2c peripheral_i2c3(
+ .out_clk({
+    i2c_emac1_out_clk[0:0] // 0:0
+  })
+,.scl({
+    i2c_emac1_scl[0:0] // 0:0
+  })
+,.sda({
+    i2c_emac1_sda[0:0] // 0:0
+  })
+,.out_data({
+    i2c_emac1_out_data[0:0] // 0:0
   })
 );
 

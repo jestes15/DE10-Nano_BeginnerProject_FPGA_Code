@@ -20,7 +20,7 @@
     <config name='periph_pll_c2' value='511' />
     <config name='periph_pll_c3' value='4' />
     <config name='periph_pll_c4' value='4' />
-    <config name='periph_pll_c5' value='511' />
+    <config name='periph_pll_c5' value='19' />
     <config name='usb_mp_clk_div' value='0' />
     <config name='spi_m_clk_div' value='0' />
     <config name='can0_clk_div' value='4' />
@@ -55,7 +55,7 @@
     <config name='gpio_db_clk_hz' value='32000' />
     <config name='l4_mp_clk_hz' value='100000000' />
     <config name='l4_sp_clk_hz' value='100000000' />
-    <config name='sdram_pll_c5' value='4' />
+    <config name='sdram_pll_c5' value='5' />
   </system>
   <fpga_interfaces>
     <config name='F2H_AXI_SLAVE' used='true' />
@@ -81,7 +81,7 @@
     </peripheral>
     <peripheral name='usb0' used='false' />
     <peripheral name='usb1' used='true' />
-    <peripheral name='spim0' used='false' />
+    <peripheral name='spim0' used='true' />
     <peripheral name='spim1' used='true' />
     <peripheral name='spis0' used='false' />
     <peripheral name='spis1' used='false' />
@@ -91,16 +91,16 @@
       <config name='CONFIG_HPS_UART0_RTS' value='0' />
       <config name='CONFIG_HPS_UART0_RX' value='1' />
     </peripheral>
-    <peripheral name='uart1' used='false'>
-      <config name='CONFIG_HPS_UART1_TX' value='0' />
-      <config name='CONFIG_HPS_UART1_CTS' value='0' />
-      <config name='CONFIG_HPS_UART1_RTS' value='0' />
-      <config name='CONFIG_HPS_UART1_RX' value='0' />
+    <peripheral name='uart1' used='true'>
+      <config name='CONFIG_HPS_UART1_TX' value='1' />
+      <config name='CONFIG_HPS_UART1_CTS' value='1' />
+      <config name='CONFIG_HPS_UART1_RTS' value='1' />
+      <config name='CONFIG_HPS_UART1_RX' value='1' />
     </peripheral>
     <peripheral name='i2c0' used='true' />
     <peripheral name='i2c1' used='true' />
-    <peripheral name='i2c2' used='false' />
-    <peripheral name='i2c3' used='false' />
+    <peripheral name='i2c2' used='true' />
+    <peripheral name='i2c3' used='true' />
     <peripheral name='can0' used='false' />
     <peripheral name='can1' used='false' />
     <peripheral name='trace' used='false' />
@@ -228,16 +228,16 @@
     <pin_mux name='SDMMCUSEFPGA' value='0' />
     <pin_mux name='USB0USEFPGA' value='0' />
     <pin_mux name='USB1USEFPGA' value='0' />
-    <pin_mux name='SPIM0USEFPGA' value='0' />
+    <pin_mux name='SPIM0USEFPGA' value='1' />
     <pin_mux name='SPIM1USEFPGA' value='0' />
     <pin_mux name='SPIS0USEFPGA' value='0' />
     <pin_mux name='SPIS1USEFPGA' value='0' />
     <pin_mux name='UART0USEFPGA' value='0' />
-    <pin_mux name='UART1USEFPGA' value='0' />
+    <pin_mux name='UART1USEFPGA' value='1' />
     <pin_mux name='I2C0USEFPGA' value='0' />
     <pin_mux name='I2C1USEFPGA' value='0' />
-    <pin_mux name='I2C2USEFPGA' value='0' />
-    <pin_mux name='I2C3USEFPGA' value='0' />
+    <pin_mux name='I2C2USEFPGA' value='1' />
+    <pin_mux name='I2C3USEFPGA' value='1' />
     <pin_mux name='CAN0USEFPGA' value='0' />
     <pin_mux name='CAN1USEFPGA' value='0' />
   </pin_muxes>

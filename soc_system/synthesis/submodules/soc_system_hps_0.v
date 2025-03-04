@@ -14,6 +14,8 @@ module soc_system_hps_0 #(
 		input  wire         f2h_cold_rst_req_n,       //  f2h_cold_reset_req.reset_n
 		input  wire         f2h_dbg_rst_req_n,        // f2h_debug_reset_req.reset_n
 		input  wire         f2h_warm_rst_req_n,       //  f2h_warm_reset_req.reset_n
+		output wire         h2f_user0_clk,            //     h2f_user0_clock.clk
+		output wire         h2f_user1_clk,            //     h2f_user1_clock.clk
 		input  wire [27:0]  f2h_stm_hwevents,         //   f2h_stm_hw_events.stm_hwevents
 		input  wire         f2h_axi_clk,              //       f2h_axi_clock.clk
 		input  wire [7:0]   f2h_AWID,                 //       f2h_axi_slave.awid
@@ -140,6 +142,33 @@ module soc_system_hps_0 #(
 		input  wire         f2h_sdram0_clk,           //    f2h_sdram0_clock.clk
 		input  wire [31:0]  f2h_irq_p0,               //            f2h_irq0.irq
 		input  wire [31:0]  f2h_irq_p1,               //            f2h_irq1.irq
+		output wire         spim0_txd,                //               spim0.txd
+		input  wire         spim0_rxd,                //                    .rxd
+		input  wire         spim0_ss_in_n,            //                    .ss_in_n
+		output wire         spim0_ssi_oe_n,           //                    .ssi_oe_n
+		output wire         spim0_ss_0_n,             //                    .ss_0_n
+		output wire         spim0_ss_1_n,             //                    .ss_1_n
+		output wire         spim0_ss_2_n,             //                    .ss_2_n
+		output wire         spim0_ss_3_n,             //                    .ss_3_n
+		output wire         spim0_sclk_out,           //      spim0_sclk_out.clk
+		input  wire         uart1_cts,                //               uart1.cts
+		input  wire         uart1_dsr,                //                    .dsr
+		input  wire         uart1_dcd,                //                    .dcd
+		input  wire         uart1_ri,                 //                    .ri
+		output wire         uart1_dtr,                //                    .dtr
+		output wire         uart1_rts,                //                    .rts
+		output wire         uart1_out1_n,             //                    .out1_n
+		output wire         uart1_out2_n,             //                    .out2_n
+		input  wire         uart1_rxd,                //                    .rxd
+		output wire         uart1_txd,                //                    .txd
+		input  wire         i2c_emac0_scl,            //         i2c2_scl_in.clk
+		output wire         i2c_emac0_out_clk,        //            i2c2_clk.clk
+		output wire         i2c_emac0_out_data,       //                i2c2.out_data
+		input  wire         i2c_emac0_sda,            //                    .sda
+		input  wire         i2c_emac1_scl,            //         i2c3_scl_in.clk
+		output wire         i2c_emac1_out_clk,        //            i2c3_clk.clk
+		output wire         i2c_emac1_out_data,       //                i2c3.out_data
+		input  wire         i2c_emac1_sda,            //                    .sda
 		output wire [14:0]  mem_a,                    //              memory.mem_a
 		output wire [2:0]   mem_ba,                   //                    .mem_ba
 		output wire         mem_ck,                   //                    .mem_ck
@@ -237,6 +266,8 @@ module soc_system_hps_0 #(
 		.f2h_cold_rst_req_n       (f2h_cold_rst_req_n),       //  f2h_cold_reset_req.reset_n
 		.f2h_dbg_rst_req_n        (f2h_dbg_rst_req_n),        // f2h_debug_reset_req.reset_n
 		.f2h_warm_rst_req_n       (f2h_warm_rst_req_n),       //  f2h_warm_reset_req.reset_n
+		.h2f_user0_clk            (h2f_user0_clk),            //     h2f_user0_clock.clk
+		.h2f_user1_clk            (h2f_user1_clk),            //     h2f_user1_clock.clk
 		.f2h_stm_hwevents         (f2h_stm_hwevents),         //   f2h_stm_hw_events.stm_hwevents
 		.f2h_axi_clk              (f2h_axi_clk),              //       f2h_axi_clock.clk
 		.f2h_AWID                 (f2h_AWID),                 //       f2h_axi_slave.awid
@@ -362,7 +393,34 @@ module soc_system_hps_0 #(
 		.f2h_sdram0_WRITE         (f2h_sdram0_WRITE),         //                    .write
 		.f2h_sdram0_clk           (f2h_sdram0_clk),           //    f2h_sdram0_clock.clk
 		.f2h_irq_p0               (f2h_irq_p0),               //            f2h_irq0.irq
-		.f2h_irq_p1               (f2h_irq_p1)                //            f2h_irq1.irq
+		.f2h_irq_p1               (f2h_irq_p1),               //            f2h_irq1.irq
+		.spim0_txd                (spim0_txd),                //               spim0.txd
+		.spim0_rxd                (spim0_rxd),                //                    .rxd
+		.spim0_ss_in_n            (spim0_ss_in_n),            //                    .ss_in_n
+		.spim0_ssi_oe_n           (spim0_ssi_oe_n),           //                    .ssi_oe_n
+		.spim0_ss_0_n             (spim0_ss_0_n),             //                    .ss_0_n
+		.spim0_ss_1_n             (spim0_ss_1_n),             //                    .ss_1_n
+		.spim0_ss_2_n             (spim0_ss_2_n),             //                    .ss_2_n
+		.spim0_ss_3_n             (spim0_ss_3_n),             //                    .ss_3_n
+		.spim0_sclk_out           (spim0_sclk_out),           //      spim0_sclk_out.clk
+		.uart1_cts                (uart1_cts),                //               uart1.cts
+		.uart1_dsr                (uart1_dsr),                //                    .dsr
+		.uart1_dcd                (uart1_dcd),                //                    .dcd
+		.uart1_ri                 (uart1_ri),                 //                    .ri
+		.uart1_dtr                (uart1_dtr),                //                    .dtr
+		.uart1_rts                (uart1_rts),                //                    .rts
+		.uart1_out1_n             (uart1_out1_n),             //                    .out1_n
+		.uart1_out2_n             (uart1_out2_n),             //                    .out2_n
+		.uart1_rxd                (uart1_rxd),                //                    .rxd
+		.uart1_txd                (uart1_txd),                //                    .txd
+		.i2c_emac0_scl            (i2c_emac0_scl),            //         i2c2_scl_in.clk
+		.i2c_emac0_out_clk        (i2c_emac0_out_clk),        //            i2c2_clk.clk
+		.i2c_emac0_out_data       (i2c_emac0_out_data),       //                i2c2.out_data
+		.i2c_emac0_sda            (i2c_emac0_sda),            //                    .sda
+		.i2c_emac1_scl            (i2c_emac1_scl),            //         i2c3_scl_in.clk
+		.i2c_emac1_out_clk        (i2c_emac1_out_clk),        //            i2c3_clk.clk
+		.i2c_emac1_out_data       (i2c_emac1_out_data),       //                i2c3.out_data
+		.i2c_emac1_sda            (i2c_emac1_sda)             //                    .sda
 	);
 
 	soc_system_hps_0_hps_io hps_io (

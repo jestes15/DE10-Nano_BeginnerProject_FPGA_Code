@@ -1,26 +1,26 @@
 
 module soc_system (
-	adc_0_sclk,
-	adc_0_cs_n,
-	adc_0_dout,
-	adc_0_din,
-	adder_a_export,
-	adder_b_export,
-	adder_sum_export,
-	alt_vip_itc_0_clocked_video_vid_clk,
-	alt_vip_itc_0_clocked_video_vid_data,
-	alt_vip_itc_0_clocked_video_underflow,
-	alt_vip_itc_0_clocked_video_vid_datavalid,
-	alt_vip_itc_0_clocked_video_vid_v_sync,
-	alt_vip_itc_0_clocked_video_vid_h_sync,
-	alt_vip_itc_0_clocked_video_vid_f,
-	alt_vip_itc_0_clocked_video_vid_h,
-	alt_vip_itc_0_clocked_video_vid_v,
+	alt_vip_cl_cvo_hdmi_clocked_video_vid_clk,
+	alt_vip_cl_cvo_hdmi_clocked_video_vid_data,
+	alt_vip_cl_cvo_hdmi_clocked_video_underflow,
+	alt_vip_cl_cvo_hdmi_clocked_video_vid_mode_change,
+	alt_vip_cl_cvo_hdmi_clocked_video_vid_std,
+	alt_vip_cl_cvo_hdmi_clocked_video_vid_datavalid,
+	alt_vip_cl_cvo_hdmi_clocked_video_vid_v_sync,
+	alt_vip_cl_cvo_hdmi_clocked_video_vid_h_sync,
+	alt_vip_cl_cvo_hdmi_clocked_video_vid_f,
+	alt_vip_cl_cvo_hdmi_clocked_video_vid_h,
+	alt_vip_cl_cvo_hdmi_clocked_video_vid_v,
+	arduino_gpio_export,
 	button_pio_export,
 	clk_clk,
-	clk_130_clk,
+	clk_hdmi_clk,
 	ctrl_reg_export,
 	dipsw_pio_export,
+	gpio_0_a_export,
+	gpio_0_b_export,
+	gpio_1_a_export,
+	gpio_1_b_export,
 	hps_0_f2h_cold_reset_req_reset_n,
 	hps_0_f2h_debug_reset_req_reset_n,
 	hps_0_f2h_stm_hw_events_stm_hwevents,
@@ -74,6 +74,33 @@ module soc_system (
 	hps_0_hps_io_hps_io_gpio_inst_GPIO53,
 	hps_0_hps_io_hps_io_gpio_inst_GPIO54,
 	hps_0_hps_io_hps_io_gpio_inst_GPIO61,
+	hps_0_i2c2_out_data,
+	hps_0_i2c2_sda,
+	hps_0_i2c2_clk_clk,
+	hps_0_i2c2_scl_in_clk,
+	hps_0_i2c3_out_data,
+	hps_0_i2c3_sda,
+	hps_0_i2c3_clk_clk,
+	hps_0_i2c3_scl_in_clk,
+	hps_0_spim0_txd,
+	hps_0_spim0_rxd,
+	hps_0_spim0_ss_in_n,
+	hps_0_spim0_ssi_oe_n,
+	hps_0_spim0_ss_0_n,
+	hps_0_spim0_ss_1_n,
+	hps_0_spim0_ss_2_n,
+	hps_0_spim0_ss_3_n,
+	hps_0_spim0_sclk_out_clk,
+	hps_0_uart1_cts,
+	hps_0_uart1_dsr,
+	hps_0_uart1_dcd,
+	hps_0_uart1_ri,
+	hps_0_uart1_dtr,
+	hps_0_uart1_rts,
+	hps_0_uart1_out1_n,
+	hps_0_uart1_out2_n,
+	hps_0_uart1_rxd,
+	hps_0_uart1_txd,
 	led_pio_export,
 	memory_mem_a,
 	memory_mem_ba,
@@ -92,32 +119,29 @@ module soc_system (
 	memory_mem_dm,
 	memory_oct_rzqin,
 	random_reg_export,
-	reset_reset_n,
-	uart_0_RXD,
-	uart_0_TXD,
 	reset_val_export);	
 
-	output		adc_0_sclk;
-	output		adc_0_cs_n;
-	input		adc_0_dout;
-	output		adc_0_din;
-	output	[63:0]	adder_a_export;
-	output	[63:0]	adder_b_export;
-	input	[63:0]	adder_sum_export;
-	input		alt_vip_itc_0_clocked_video_vid_clk;
-	output	[31:0]	alt_vip_itc_0_clocked_video_vid_data;
-	output		alt_vip_itc_0_clocked_video_underflow;
-	output		alt_vip_itc_0_clocked_video_vid_datavalid;
-	output		alt_vip_itc_0_clocked_video_vid_v_sync;
-	output		alt_vip_itc_0_clocked_video_vid_h_sync;
-	output		alt_vip_itc_0_clocked_video_vid_f;
-	output		alt_vip_itc_0_clocked_video_vid_h;
-	output		alt_vip_itc_0_clocked_video_vid_v;
+	input		alt_vip_cl_cvo_hdmi_clocked_video_vid_clk;
+	output	[31:0]	alt_vip_cl_cvo_hdmi_clocked_video_vid_data;
+	output		alt_vip_cl_cvo_hdmi_clocked_video_underflow;
+	output		alt_vip_cl_cvo_hdmi_clocked_video_vid_mode_change;
+	output		alt_vip_cl_cvo_hdmi_clocked_video_vid_std;
+	output		alt_vip_cl_cvo_hdmi_clocked_video_vid_datavalid;
+	output		alt_vip_cl_cvo_hdmi_clocked_video_vid_v_sync;
+	output		alt_vip_cl_cvo_hdmi_clocked_video_vid_h_sync;
+	output		alt_vip_cl_cvo_hdmi_clocked_video_vid_f;
+	output		alt_vip_cl_cvo_hdmi_clocked_video_vid_h;
+	output		alt_vip_cl_cvo_hdmi_clocked_video_vid_v;
+	inout	[7:0]	arduino_gpio_export;
 	input	[1:0]	button_pio_export;
 	input		clk_clk;
-	input		clk_130_clk;
+	output		clk_hdmi_clk;
 	output	[1:0]	ctrl_reg_export;
 	input	[3:0]	dipsw_pio_export;
+	inout	[17:0]	gpio_0_a_export;
+	inout	[17:0]	gpio_0_b_export;
+	inout	[17:0]	gpio_1_a_export;
+	inout	[17:0]	gpio_1_b_export;
 	input		hps_0_f2h_cold_reset_req_reset_n;
 	input		hps_0_f2h_debug_reset_req_reset_n;
 	input	[27:0]	hps_0_f2h_stm_hw_events_stm_hwevents;
@@ -171,7 +195,34 @@ module soc_system (
 	inout		hps_0_hps_io_hps_io_gpio_inst_GPIO53;
 	inout		hps_0_hps_io_hps_io_gpio_inst_GPIO54;
 	inout		hps_0_hps_io_hps_io_gpio_inst_GPIO61;
-	output	[6:0]	led_pio_export;
+	output		hps_0_i2c2_out_data;
+	input		hps_0_i2c2_sda;
+	output		hps_0_i2c2_clk_clk;
+	input		hps_0_i2c2_scl_in_clk;
+	output		hps_0_i2c3_out_data;
+	input		hps_0_i2c3_sda;
+	output		hps_0_i2c3_clk_clk;
+	input		hps_0_i2c3_scl_in_clk;
+	output		hps_0_spim0_txd;
+	input		hps_0_spim0_rxd;
+	input		hps_0_spim0_ss_in_n;
+	output		hps_0_spim0_ssi_oe_n;
+	output		hps_0_spim0_ss_0_n;
+	output		hps_0_spim0_ss_1_n;
+	output		hps_0_spim0_ss_2_n;
+	output		hps_0_spim0_ss_3_n;
+	output		hps_0_spim0_sclk_out_clk;
+	input		hps_0_uart1_cts;
+	input		hps_0_uart1_dsr;
+	input		hps_0_uart1_dcd;
+	input		hps_0_uart1_ri;
+	output		hps_0_uart1_dtr;
+	output		hps_0_uart1_rts;
+	output		hps_0_uart1_out1_n;
+	output		hps_0_uart1_out2_n;
+	input		hps_0_uart1_rxd;
+	output		hps_0_uart1_txd;
+	output	[7:0]	led_pio_export;
 	output	[14:0]	memory_mem_a;
 	output	[2:0]	memory_mem_ba;
 	output		memory_mem_ck;
@@ -189,8 +240,5 @@ module soc_system (
 	output	[3:0]	memory_mem_dm;
 	input		memory_oct_rzqin;
 	input	[31:0]	random_reg_export;
-	input		reset_reset_n;
-	input		uart_0_RXD;
-	output		uart_0_TXD;
 	output	[31:0]	reset_val_export;
 endmodule

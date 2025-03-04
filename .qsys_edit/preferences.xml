@@ -3,14 +3,12 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="335" />
-   <irq preferredWidth="63" />
-   <inputclock preferredWidth="95" />
-   <export preferredWidth="183" />
+   <connections preferredWidth="527" />
+   <irq preferredWidth="47" />
+   <export preferredWidth="256" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Library/Processors and Peripherals/Peripherals,Library/Processors and Peripherals,Project,Library" />
- <window width="2031" height="1399" x="529" y="0" />
+ <library expandedCategories="Project,Library" />
+ <window width="1841" height="1683" x="1705" y="412" />
  <generation block_symbol_file="0" />
 </preferences>
