@@ -1,24 +1,24 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst soc_system.pll_stream -pg 1 -lvl 7 -y 2190
-preplace inst soc_system.pll_reset_pio -pg 1 -lvl 6 -y 1450
-preplace inst soc_system.clk_0 -pg 1 -lvl 1 -y 800
-preplace inst soc_system.cvo_reset_pio -pg 1 -lvl 6 -y 650
+preplace inst soc_system.pll_stream -pg 1 -lvl 7 -y 2170
+preplace inst soc_system.pll_reset_pio -pg 1 -lvl 6 -y 1410
+preplace inst soc_system.clk_0 -pg 1 -lvl 1 -y 780
+preplace inst soc_system.cvo_reset_pio -pg 1 -lvl 6 -y 630
 preplace inst soc_system.alt_vip_cl_cvo_hdmi.video_in.clk_bridge -pg 1
 preplace inst soc_system.hps_0.clk_0 -pg 1
 preplace inst soc_system.alt_vip_cl_cvo_hdmi.is_reset_bridge -pg 1
 preplace inst soc_system.hps_0.axi_sdram -pg 1
-preplace inst soc_system.altchip_id_0 -pg 1 -lvl 2 -y 1170
-preplace inst soc_system.clk_hdmi -pg 1 -lvl 9 -y 2270
+preplace inst soc_system.altchip_id_0 -pg 1 -lvl 2 -y 1230
+preplace inst soc_system.clk_hdmi -pg 1 -lvl 9 -y 2350
 preplace inst soc_system -pg 1 -lvl 1 -y 40 -regy -20
 preplace inst soc_system.hps_0.timer0 -pg 1
 preplace inst soc_system.cvo_reset_conduit -pg 1 -lvl 1 -y 1110
 preplace inst soc_system.alt_vip_cl_cvo_hdmi.control -pg 1
-preplace inst soc_system.custom_reset_synchronizer -pg 1 -lvl 8 -y 2230
+preplace inst soc_system.custom_reset_synchronizer -pg 1 -lvl 8 -y 2210
 preplace inst soc_system.hps_0.i2c0 -pg 1
 preplace inst soc_system.ctrl_register -pg 1 -lvl 14 -y 270
 preplace inst soc_system.hps_0.timer1 -pg 1
-preplace inst soc_system.pll_reset_conduit -pg 1 -lvl 6 -y 1410
+preplace inst soc_system.pll_reset_conduit -pg 1 -lvl 6 -y 1370
 preplace inst soc_system.hps_0.i2c1 -pg 1
 preplace inst soc_system.hps_0.timer2 -pg 1
 preplace inst soc_system.hps_0.wd_timer0 -pg 1
@@ -26,7 +26,7 @@ preplace inst soc_system.hps_0.qspi -pg 1
 preplace inst soc_system.hps_0.i2c2 -pg 1
 preplace inst soc_system.hps_0.wd_timer1 -pg 1
 preplace inst soc_system.hps_0.timer3 -pg 1
-preplace inst soc_system.pll_stream_reconfig -pg 1 -lvl 6 -y 1130
+preplace inst soc_system.pll_stream_reconfig -pg 1 -lvl 6 -y 1110
 preplace inst soc_system.hps_0.i2c3 -pg 1
 preplace inst soc_system.hps_0.gpio0 -pg 1
 preplace inst soc_system.hps_0.clkmgr -pg 1
@@ -41,11 +41,11 @@ preplace inst soc_system.hps_0.uart0 -pg 1
 preplace inst soc_system.hps_0.uart1 -pg 1
 preplace inst soc_system.alt_vip_cl_cvo_hdmi.video_in -pg 1
 preplace inst soc_system.hps_0.spim0 -pg 1
-preplace inst soc_system.arduino_gpio -pg 1 -lvl 6 -y 1010
+preplace inst soc_system.arduino_gpio -pg 1 -lvl 6 -y 990
 preplace inst soc_system.hps_0.spim1 -pg 1
 preplace inst soc_system.alt_vip_cl_cvo_hdmi.video_in.vid_back -pg 1
 preplace inst soc_system.alt_vip_cl_vfb_hdmi.pkt_trans_rd -pg 1
-preplace inst soc_system.locked_pio -pg 1 -lvl 6 -y 1290
+preplace inst soc_system.locked_pio -pg 1 -lvl 6 -y 1270
 preplace inst soc_system.hps_0.timer -pg 1
 preplace inst soc_system.alt_vip_cl_cvo_hdmi.is_clk_bridge -pg 1
 preplace inst soc_system.hps_0.sysmgr -pg 1
@@ -58,12 +58,12 @@ preplace inst soc_system.alt_vip_cl_cvo_hdmi.video_in.vid_front -pg 1
 preplace inst soc_system.hps_0.axi_ocram -pg 1
 preplace inst soc_system.hps_0.sdmmc -pg 1
 preplace inst soc_system.button_pio -pg 1 -lvl 12 -y 30
-preplace inst soc_system.chip_id_read_mm_0 -pg 1 -lvl 6 -y 550
+preplace inst soc_system.chip_id_read_mm_0 -pg 1 -lvl 6 -y 530
 preplace inst soc_system.sysid_qsys -pg 1 -lvl 6 -y 450
 preplace inst soc_system.por -pg 1 -lvl 2 -y 1110
-preplace inst soc_system.led_pio -pg 1 -lvl 6 -y 1650
-preplace inst soc_system.gpio_0_a -pg 1 -lvl 6 -y 90
-preplace inst soc_system.hdmi_mm_bridge -pg 1 -lvl 9 -y 2190
+preplace inst soc_system.led_pio -pg 1 -lvl 6 -y 1610
+preplace inst soc_system.gpio_0_a -pg 1 -lvl 6 -y 70
+preplace inst soc_system.hdmi_mm_bridge -pg 1 -lvl 9 -y 2270
 preplace inst soc_system.hps_0.arm_gic_0 -pg 1
 preplace inst soc_system.alt_vip_cl_vfb_hdmi.av_st_clk_bridge -pg 1
 preplace inst soc_system.hps_0.rstmgr -pg 1
@@ -79,15 +79,15 @@ preplace inst soc_system.lw_mm_bridge -pg 1 -lvl 5 -y 1210
 preplace inst soc_system.hps_0.hps_io -pg 1
 preplace inst soc_system.hps_reset -pg 1 -lvl 5 -y 520
 preplace inst soc_system.hps_0.nand0 -pg 1
-preplace inst soc_system.alt_vip_cl_vfb_hdmi -pg 1 -lvl 10 -y 2020
+preplace inst soc_system.alt_vip_cl_vfb_hdmi -pg 1 -lvl 10 -y 2000
 preplace inst soc_system.alt_vip_cl_cvo_hdmi.cvo_core -pg 1
 preplace inst soc_system.alt_vip_cl_vfb_hdmi.av_mm_reset_bridge -pg 1
 preplace inst soc_system.hps_0.gmac0 -pg 1
 preplace inst soc_system.alt_vip_cl_vfb_hdmi.rd_ctrl -pg 1
 preplace inst soc_system.hps_0.gmac1 -pg 1
-preplace inst soc_system.hps_0 -pg 1 -lvl 12 -y 780
+preplace inst soc_system.hps_0 -pg 1 -lvl 12 -y 720
 preplace inst soc_system.hps_0.hps_io.border -pg 1
-preplace inst soc_system.alt_vip_cl_cvo_hdmi -pg 1 -lvl 11 -y 2020
+preplace inst soc_system.alt_vip_cl_cvo_hdmi -pg 1 -lvl 11 -y 2000
 preplace inst soc_system.hps_0.eosc1 -pg 1
 preplace inst soc_system.hps_0.fpgamgr -pg 1
 preplace inst soc_system.dipsw_pio -pg 1 -lvl 12 -y 150
@@ -98,64 +98,64 @@ preplace inst soc_system.hps_0.dcan1 -pg 1
 preplace inst soc_system.hps_0.fpga_interfaces -pg 1
 preplace inst soc_system.hps_0.f2s_sdram_ref_clk -pg 1
 preplace inst soc_system.gpio_1_a -pg 1 -lvl 6 -y 2230
-preplace inst soc_system.gpio_1_b -pg 1 -lvl 6 -y 1550
+preplace inst soc_system.gpio_1_b -pg 1 -lvl 6 -y 1510
 preplace inst soc_system.alt_vip_cl_cvo_hdmi.scheduler -pg 1
 preplace inst soc_system.hps_0.sdrctl -pg 1
 preplace inst soc_system.hps_0.dma -pg 1
 preplace inst soc_system.alt_vip_cl_vfb_hdmi.sync_ctrl -pg 1
 preplace inst soc_system.hps_0.bridges -pg 1
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_0_uart1,(SLAVE)hps_0.uart1) 1 0 12 NJ 790 NJ 810 NJ 810 NJ 810 NJ 810 NJ 980 NJ 1160 NJ 1160 NJ 1160 NJ 1160 NJ 1160 NJ
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)cvo_reset_pio.external_connection,(SLAVE)cvo_reset_conduit.input_conduit) 1 0 6 230 970 NJ 970 NJ 970 NJ 970 NJ 970 1830
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)chip_id_read_mm_0.clock,(SLAVE)dipsw_pio.clk,(SLAVE)cvo_reset_pio.clk,(SLAVE)gpio_0_b.clk,(SLAVE)ctrl_register.clk,(SLAVE)led_pio.clk,(SLAVE)lfsr_reset_value_reg.clk,(SLAVE)sysid_qsys.clk,(SLAVE)gpio_1_b.clk,(MASTER)clk_0.clk,(SLAVE)pll_reset_pio.clk,(SLAVE)pll_stream.refclk,(SLAVE)arduino_gpio.clk,(SLAVE)gpio_1_a.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)pll_stream_reconfig.mgmt_clk,(SLAVE)locked_pio.clk,(SLAVE)jtag_uart.clk,(SLAVE)lw_mm_bridge.clk,(SLAVE)random.clk,(SLAVE)gpio_0_a.clk,(SLAVE)hps_0.h2f_axi_clock,(SLAVE)por.clock,(SLAVE)altchip_id_0.clkin,(SLAVE)button_pio.clk,(SLAVE)custom_ip_bridge.clk,(SLAVE)hps_0.h2f_lw_axi_clock) 1 1 13 480 1240 NJ 1080 NJ 1080 1480 1120 2030 1970 2550 2010 NJ 2010 NJ 1820 NJ 1800 NJ 1800 4310 580 4960 560 5120
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)led_pio.external_connection,(SLAVE)soc_system.led_pio) 1 0 6 NJ 1300 NJ 1300 NJ 1140 NJ 1140 NJ 1680 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.gpio_1_a,(SLAVE)gpio_1_a.external_connection) 1 0 6 NJ 2260 NJ 2260 NJ 2260 NJ 2260 NJ 2260 NJ
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(MASTER)hps_0.f2h_irq0,(SLAVE)alt_vip_cl_cvo_hdmi.status_update_irq,(SLAVE)dipsw_pio.irq,(SLAVE)button_pio.irq,(SLAVE)alt_vip_cl_vfb_hdmi.control_interrupt,(SLAVE)arduino_gpio.irq,(SLAVE)jtag_uart.irq) 1 5 8 2150 1990 NJ 1990 NJ 1990 NJ 1800 3490 1860 3900 1980 4350 1180 4860
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)pll_stream.outclk0,(SLAVE)custom_reset_synchronizer.clock_in) 1 7 1 N
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)random.s1,(MASTER)custom_ip_bridge.m0,(SLAVE)ctrl_register.s1,(SLAVE)lfsr_reset_value_reg.s1) 1 13 1 5160
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.i2c3_scl_in,(SLAVE)soc_system.hps_0_i2c3_scl_in) 1 0 12 NJ 730 NJ 750 NJ 750 NJ 750 NJ 750 NJ 920 NJ 1100 NJ 1100 NJ 1100 NJ 1100 NJ 1100 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_0_i2c3,(SLAVE)hps_0.i2c3) 1 0 12 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 980 NJ 1220 NJ 1220 NJ 1800 NJ 1800 NJ 1800 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.memory,(SLAVE)soc_system.memory) 1 0 12 NJ 910 NJ 910 NJ 910 NJ 910 NJ 880 NJ 820 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)pll_stream.reconfig_from_pll,(SLAVE)pll_stream_reconfig.reconfig_from_pll) 1 5 2 2030 2200 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_0_f2h_stm_hw_events,(SLAVE)hps_0.f2h_stm_hw_events) 1 0 12 NJ 950 NJ 950 NJ 950 NJ 950 NJ 920 NJ 880 NJ 1120 NJ 1120 NJ 1120 NJ 1120 NJ 1120 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_0_f2h_cold_reset_req,(SLAVE)hps_0.f2h_cold_reset_req) 1 0 12 NJ 870 NJ 870 NJ 760 NJ 760 NJ 760 NJ 760 NJ 970 NJ 970 NJ 970 NJ 970 NJ 970 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.i2c3_scl_in,(SLAVE)soc_system.hps_0_i2c3_scl_in) 1 0 12 NJ 730 NJ 720 NJ 720 NJ 720 NJ 720 NJ 780 NJ 1020 NJ 1020 NJ 1020 NJ 1020 NJ 1020 NJ
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)clk_0.clk_in,(SLAVE)soc_system.clk) 1 0 1 NJ
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)hps_reset.clk,(MASTER)hps_0.h2f_user1_clock) 1 4 9 1520 830 NJ 1000 NJ 1220 NJ 1220 NJ 1220 NJ 1220 NJ 1220 NJ 1220 4840
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)lw_mm_bridge.s0,(MASTER)hps_0.h2f_lw_axi_master) 1 4 9 1520 1300 NJ 1400 NJ 1400 NJ 1400 NJ 1840 NJ 1840 NJ 1840 NJ 1250 4880
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.f2h_cold_reset_req,(SLAVE)soc_system.hps_0_f2h_cold_reset_req) 1 0 12 NJ 590 NJ 590 NJ 590 NJ 590 NJ 610 NJ 780 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.gpio_1_b,(SLAVE)gpio_1_b.external_connection) 1 0 6 NJ 1280 NJ 1280 NJ 1120 NJ 1120 NJ 1580 NJ
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)onchip_memory2_0.s1,(SLAVE)custom_ip_bridge.s0,(MASTER)hps_0.h2f_axi_master) 1 4 9 1500 1100 NJ 1280 NJ 1200 NJ 1200 NJ 1200 NJ 1200 NJ 1200 NJ 1200 4940
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.i2c2_scl_in,(SLAVE)soc_system.hps_0_i2c2_scl_in) 1 0 12 NJ 690 NJ 710 NJ 710 NJ 710 NJ 710 NJ 880 NJ 1030 NJ 1030 NJ 1030 NJ 1030 NJ 1030 NJ
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)alt_vip_cl_vfb_hdmi.mem_reset,(SLAVE)alt_vip_cl_cvo_hdmi.main_reset,(SLAVE)hdmi_mm_bridge.reset,(MASTER)custom_reset_synchronizer.reset_out,(SLAVE)alt_vip_cl_vfb_hdmi.main_reset) 1 8 3 3320 2130 3550 1920 3860
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)alt_vip_cl_vfb_hdmi.mem_reset,(SLAVE)alt_vip_cl_cvo_hdmi.main_reset,(MASTER)custom_reset_synchronizer.reset_out,(SLAVE)alt_vip_cl_vfb_hdmi.main_reset,(SLAVE)hdmi_mm_bridge.reset) 1 8 3 3380 2140 3630 1960 3960
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)button_pio.s1,(SLAVE)cvo_reset_pio.s1,(SLAVE)dipsw_pio.s1,(SLAVE)gpio_1_b.s1,(SLAVE)arduino_gpio.s1,(SLAVE)chip_id_read_mm_0.s0,(MASTER)lw_mm_bridge.m0,(SLAVE)pll_reset_pio.s1,(SLAVE)gpio_0_b.s1,(SLAVE)led_pio.s1,(SLAVE)locked_pio.s1,(SLAVE)pll_stream_reconfig.mgmt_avalon_slave,(SLAVE)gpio_0_a.s1,(SLAVE)gpio_1_a.s1,(SLAVE)hdmi_mm_bridge.s0,(SLAVE)sysid_qsys.control_slave,(SLAVE)jtag_uart.avalon_jtag_slave) 1 5 7 1930 200 NJ 160 NJ 160 3320 240 NJ 240 NJ 240 4570
+preplace netloc INTERCONNECT<net_container>soc_system</net_container>(SLAVE)hps_reset.in_reset,(SLAVE)clk_0.clk_in_reset,(MASTER)por.reset,(MASTER)hps_0.h2f_reset) 1 0 13 230 850 NJ 850 840 610 NJ 610 1500 940 NJ 900 NJ 1140 NJ 1140 NJ 1140 NJ 1140 NJ 1140 NJ 1140 5020
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)pll_reset_conduit.input_conduit,(SLAVE)pll_reset_pio.external_connection) 1 5 1 2110
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)ctrl_register.s1,(MASTER)custom_ip_bridge.m0,(SLAVE)lfsr_reset_value_reg.s1,(SLAVE)random.s1) 1 13 1 5260
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)hps_0.h2f_lw_axi_master,(SLAVE)lw_mm_bridge.s0) 1 4 9 1520 1180 NJ 1240 NJ 1240 NJ 1240 NJ 1820 NJ 1820 NJ 1820 NJ 1260 5040
 preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)alt_vip_cl_cvo_hdmi.din,(MASTER)alt_vip_cl_vfb_hdmi.dout) 1 10 1 N
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)pll_stream_reconfig.reconfig_from_pll,(SLAVE)pll_stream.reconfig_from_pll) 1 5 2 2130 2220 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(MASTER)soc_system.clk_hdmi,(MASTER)clk_hdmi.out_clk) 1 9 6 NJ 2280 NJ 2280 NJ 2280 NJ 2280 NJ 2280 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(MASTER)soc_system.hps_0_i2c2_clk,(MASTER)hps_0.i2c2_clk) 1 12 3 NJ 1010 NJ 1010 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.uart1,(SLAVE)soc_system.hps_0_uart1) 1 0 12 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 940 NJ 1180 NJ 1180 NJ 1760 NJ 1760 NJ 1760 NJ
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)hps_0.h2f_user1_clock,(SLAVE)hps_reset.clk) 1 4 9 1520 960 NJ 920 NJ 1160 NJ 1160 NJ 1160 NJ 1160 NJ 1160 NJ 1160 5000
+preplace netloc EXPORT<net_container>soc_system</net_container>(MASTER)soc_system.clk_hdmi,(MASTER)clk_hdmi.out_clk) 1 9 6 NJ 2360 NJ 2360 NJ 2360 NJ 2360 NJ 2360 NJ
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)custom_reset_synchronizer.clock_in,(MASTER)pll_stream.outclk0) 1 7 1 N
+preplace netloc EXPORT<net_container>soc_system</net_container>(MASTER)soc_system.hps_0_i2c2_clk,(MASTER)hps_0.i2c2_clk) 1 12 3 NJ 950 NJ 950 NJ
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)random.external_connection,(SLAVE)soc_system.random_reg) 1 0 14 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 NJ 540 NJ 540 NJ 540 NJ 540 NJ 540 NJ 540 NJ 540 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.i2c3,(SLAVE)soc_system.hps_0_i2c3) 1 0 12 NJ 710 NJ 730 NJ 730 NJ 730 NJ 730 NJ 900 NJ 1080 NJ 1080 NJ 1080 NJ 1080 NJ 1080 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.f2h_debug_reset_req,(SLAVE)soc_system.hps_0_f2h_debug_reset_req) 1 0 12 NJ 610 NJ 630 NJ 630 NJ 630 NJ 630 NJ 800 NJ 950 NJ 950 NJ 950 NJ 950 NJ 950 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.gpio_0_a,(SLAVE)gpio_0_a.external_connection) 1 0 6 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)pll_stream_reconfig.reconfig_to_pll,(SLAVE)pll_stream.reconfig_to_pll) 1 5 2 2170 1260 2650
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)altchip_id_0.output,(SLAVE)chip_id_read_mm_0.in0) 1 2 4 NJ 1060 NJ 1060 NJ 1060 2130
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.memory,(SLAVE)hps_0.memory) 1 0 12 NJ 750 NJ 770 NJ 770 NJ 770 NJ 770 NJ 940 NJ 1120 NJ 1120 NJ 1120 NJ 1120 NJ 1120 NJ
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)alt_vip_cl_vfb_hdmi.control,(MASTER)hdmi_mm_bridge.m0,(SLAVE)alt_vip_cl_cvo_hdmi.control) 1 9 2 3530 1900 3920
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)hps_0.f2h_axi_clock,(SLAVE)alt_vip_cl_vfb_hdmi.mem_clock,(MASTER)hps_0.h2f_user0_clock,(SLAVE)hps_0.f2h_sdram0_clock) 1 9 4 3570 1940 NJ 1940 4370 720 4920
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)hps_0.f2h_sdram0_data,(MASTER)alt_vip_cl_vfb_hdmi.mem_master_rd) 1 10 2 NJ 1960 4430
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.dipsw_pio,(SLAVE)dipsw_pio.external_connection) 1 0 12 NJ 80 NJ 80 NJ 80 NJ 80 NJ 80 NJ 80 NJ 180 NJ 180 NJ 180 NJ 180 NJ 180 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.button_pio,(SLAVE)button_pio.external_connection) 1 0 12 NJ 60 NJ 60 NJ 60 NJ 60 NJ 60 NJ 60 NJ 60 NJ 60 NJ 60 NJ 60 NJ 60 NJ
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)pll_stream.locked,(SLAVE)locked_pio.external_connection) 1 5 2 2170 2200 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.f2h_debug_reset_req,(SLAVE)soc_system.hps_0_f2h_debug_reset_req) 1 0 12 NJ 610 NJ 630 NJ 630 NJ 630 NJ 630 NJ 740 NJ 950 NJ 950 NJ 950 NJ 950 NJ 950 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.gpio_0_a,(SLAVE)gpio_0_a.external_connection) 1 0 6 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ
+preplace netloc INTERCONNECT<net_container>soc_system</net_container>(SLAVE)jtag_uart.reset,(SLAVE)led_pio.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)lw_mm_bridge.reset,(MASTER)cvo_reset_conduit.output_reset,(SLAVE)chip_id_read_mm_0.reset,(SLAVE)cvo_reset_pio.reset,(SLAVE)gpio_1_a.reset,(SLAVE)gpio_1_b.reset,(SLAVE)random.reset,(SLAVE)dipsw_pio.reset,(SLAVE)locked_pio.reset,(SLAVE)altchip_id_0.reset,(SLAVE)custom_ip_bridge.reset,(SLAVE)ctrl_register.reset,(SLAVE)lfsr_reset_value_reg.reset,(SLAVE)gpio_0_a.reset,(SLAVE)custom_reset_synchronizer.reset_in,(MASTER)clk_0.clk_reset,(SLAVE)gpio_0_b.reset,(SLAVE)arduino_gpio.reset,(SLAVE)sysid_qsys.reset,(SLAVE)pll_reset_pio.reset,(SLAVE)button_pio.reset,(SLAVE)pll_stream_reconfig.mgmt_reset) 1 1 13 460 1320 NJ 1140 NJ 1140 1460 1340 1910 180 NJ 140 3060 220 NJ 220 NJ 220 NJ 220 4470 600 5080 560 5280
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)altchip_id_0.output,(SLAVE)chip_id_read_mm_0.in0) 1 2 4 NJ 1100 NJ 1100 NJ 1100 1850
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)cvo_reset_conduit.input_conduit,(SLAVE)cvo_reset_pio.external_connection) 1 0 6 230 1080 NJ 1080 NJ 1080 NJ 1080 NJ 1080 1890
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)alt_vip_cl_vfb_hdmi.control,(MASTER)hdmi_mm_bridge.m0,(SLAVE)alt_vip_cl_cvo_hdmi.control) 1 9 2 3590 1860 4040
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_0_i2c2_scl_in,(SLAVE)hps_0.i2c2_scl_in) 1 0 12 NJ 1020 NJ 1020 NJ 1020 NJ 1020 NJ 1020 NJ 960 NJ 1200 NJ 1200 NJ 1780 NJ 1780 NJ 1780 NJ
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(MASTER)hps_0.h2f_axi_master,(SLAVE)custom_ip_bridge.s0,(SLAVE)onchip_memory2_0.s1) 1 4 9 1520 1320 NJ 1260 NJ 1260 NJ 1260 NJ 1840 NJ 1840 NJ 1840 NJ 1400 5080
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)hps_0.f2h_sdram0_data,(MASTER)alt_vip_cl_vfb_hdmi.mem_master_rd) 1 10 2 NJ 1940 4570
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.dipsw_pio,(SLAVE)dipsw_pio.external_connection) 1 0 12 NJ 60 NJ 60 NJ 60 NJ 60 NJ 60 NJ 60 NJ 180 NJ 180 NJ 180 NJ 180 NJ 180 NJ
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)pll_stream.locked,(SLAVE)locked_pio.external_connection) 1 5 2 2090 2180 NJ
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.reset_val,(SLAVE)lfsr_reset_value_reg.external_connection) 1 0 14 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_0_spim0,(SLAVE)hps_0.spim0) 1 0 12 NJ 770 NJ 790 NJ 790 NJ 790 NJ 790 NJ 960 NJ 1140 NJ 1140 NJ 1140 NJ 1140 NJ 1140 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_0_i2c2,(SLAVE)hps_0.i2c2) 1 0 12 NJ 570 NJ 990 NJ 990 NJ 990 NJ 990 NJ 1780 NJ 1780 NJ 1780 NJ 1780 NJ 1780 NJ 1780 NJ
-preplace netloc INTERCONNECT<net_container>soc_system</net_container>(SLAVE)random.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)gpio_1_b.reset,(SLAVE)sysid_qsys.reset,(MASTER)clk_0.clk_reset,(SLAVE)cvo_reset_pio.reset,(SLAVE)pll_reset_pio.reset,(SLAVE)altchip_id_0.reset,(SLAVE)led_pio.reset,(SLAVE)lw_mm_bridge.reset,(SLAVE)custom_ip_bridge.reset,(SLAVE)lfsr_reset_value_reg.reset,(MASTER)cvo_reset_conduit.output_reset,(SLAVE)gpio_1_a.reset,(SLAVE)arduino_gpio.reset,(SLAVE)gpio_0_a.reset,(SLAVE)button_pio.reset,(SLAVE)ctrl_register.reset,(SLAVE)gpio_0_b.reset,(SLAVE)jtag_uart.reset,(SLAVE)chip_id_read_mm_0.reset,(SLAVE)locked_pio.reset,(SLAVE)pll_stream_reconfig.mgmt_reset,(SLAVE)dipsw_pio.reset,(SLAVE)custom_reset_synchronizer.reset_in) 1 1 13 460 1260 NJ 1100 NJ 1100 1460 1140 2090 540 NJ 890 3060 360 NJ 360 NJ 360 NJ 360 4430 600 4960 660 5140
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_0_f2h_warm_reset_req,(SLAVE)hps_0.f2h_warm_reset_req) 1 0 12 NJ 650 NJ 670 NJ 670 NJ 670 NJ 670 NJ 840 NJ 990 NJ 990 NJ 990 NJ 990 NJ 990 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.alt_vip_cl_cvo_hdmi_clocked_video,(SLAVE)alt_vip_cl_cvo_hdmi.clocked_video) 1 0 11 NJ 1160 NJ 1160 NJ 1160 NJ 1160 NJ 1160 NJ 2180 NJ 2180 NJ 2180 NJ 2180 NJ 2180 NJ
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)pll_reset_pio.external_connection,(SLAVE)pll_reset_conduit.input_conduit) 1 5 1 2190
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)pll_reset_conduit.output_reset,(SLAVE)pll_stream.reset) 1 6 1 2570
-preplace netloc EXPORT<net_container>soc_system</net_container>(MASTER)soc_system.hps_0_i2c3_clk,(MASTER)hps_0.i2c3_clk) 1 12 3 NJ 1050 NJ 1050 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(MASTER)soc_system.hps_0_h2f_reset,(MASTER)hps_reset.out_reset) 1 5 10 NJ 1760 NJ 1760 NJ 1760 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.f2h_stm_hw_events,(SLAVE)soc_system.hps_0_f2h_stm_hw_events) 1 0 12 NJ 630 NJ 650 NJ 650 NJ 650 NJ 650 NJ 820 NJ 970 NJ 970 NJ 970 NJ 970 NJ 970 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)arduino_gpio.external_connection,(SLAVE)soc_system.arduino_gpio) 1 0 6 NJ 1030 NJ 1030 NJ 1030 NJ 1030 NJ 1030 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.hps_io,(SLAVE)soc_system.hps_0_hps_io) 1 0 12 NJ 670 NJ 690 NJ 690 NJ 690 NJ 690 NJ 860 NJ 1010 NJ 1010 NJ 1010 NJ 1010 NJ 1010 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_0_spim0,(SLAVE)hps_0.spim0) 1 0 12 NJ 770 NJ 740 NJ 740 NJ 740 NJ 740 NJ 860 NJ 1100 NJ 1100 NJ 1100 NJ 1100 NJ 1100 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_0_i2c2,(SLAVE)hps_0.i2c2) 1 0 12 NJ 570 NJ 980 NJ 980 NJ 980 NJ 980 NJ 1740 NJ 1740 NJ 1740 NJ 1740 NJ 1740 NJ 1740 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.f2h_warm_reset_req,(SLAVE)soc_system.hps_0_f2h_warm_reset_req) 1 0 12 NJ 890 NJ 890 NJ 890 NJ 890 NJ 860 NJ 800 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(MASTER)hps_0.i2c3_clk,(MASTER)soc_system.hps_0_i2c3_clk) 1 12 3 NJ 970 NJ 970 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)gpio_1_a.external_connection,(SLAVE)soc_system.gpio_1_a) 1 0 6 NJ 2260 NJ 2260 NJ 2260 NJ 2260 NJ 2260 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.led_pio,(SLAVE)led_pio.external_connection) 1 0 6 NJ 1360 NJ 1360 NJ 1180 NJ 1180 NJ 1640 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)gpio_1_b.external_connection,(SLAVE)soc_system.gpio_1_b) 1 0 6 NJ 1340 NJ 1340 NJ 1160 NJ 1160 NJ 1540 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_0_hps_io,(SLAVE)hps_0.hps_io) 1 0 12 NJ 930 NJ 930 NJ 930 NJ 930 NJ 900 NJ 840 NJ 1080 NJ 1080 NJ 1080 NJ 1080 NJ 1080 NJ
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)led_pio.clk,(SLAVE)cvo_reset_pio.clk,(SLAVE)ctrl_register.clk,(SLAVE)jtag_uart.clk,(SLAVE)pll_stream_reconfig.mgmt_clk,(SLAVE)button_pio.clk,(SLAVE)pll_reset_pio.clk,(SLAVE)gpio_1_b.clk,(SLAVE)lfsr_reset_value_reg.clk,(SLAVE)gpio_0_b.clk,(SLAVE)hps_0.h2f_lw_axi_clock,(SLAVE)sysid_qsys.clk,(SLAVE)custom_ip_bridge.clk,(SLAVE)pll_stream.refclk,(SLAVE)lw_mm_bridge.clk,(SLAVE)gpio_0_a.clk,(SLAVE)hps_0.h2f_axi_clock,(SLAVE)onchip_memory2_0.clk1,(SLAVE)gpio_1_a.clk,(MASTER)clk_0.clk,(SLAVE)locked_pio.clk,(SLAVE)chip_id_read_mm_0.clock,(SLAVE)arduino_gpio.clk,(SLAVE)dipsw_pio.clk,(SLAVE)random.clk,(SLAVE)por.clock,(SLAVE)altchip_id_0.clkin) 1 1 13 480 1300 NJ 1120 NJ 1120 1500 1300 2010 2080 2770 2080 NJ 2080 NJ 2080 NJ 1940 NJ 1920 4370 580 4980 520 5240
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.alt_vip_cl_cvo_hdmi_clocked_video,(SLAVE)alt_vip_cl_cvo_hdmi.clocked_video) 1 0 11 NJ 1200 NJ 1200 NJ 1200 NJ 1200 NJ 1200 NJ 2160 NJ 2160 NJ 2160 NJ 2160 NJ 2160 NJ
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)dipsw_pio.irq,(SLAVE)alt_vip_cl_vfb_hdmi.control_interrupt,(SLAVE)alt_vip_cl_cvo_hdmi.status_update_irq,(MASTER)hps_0.f2h_irq0,(SLAVE)jtag_uart.irq,(SLAVE)button_pio.irq,(SLAVE)arduino_gpio.irq) 1 5 8 2070 2100 NJ 2100 NJ 2100 NJ 2100 3550 1880 3980 1960 4450 680 4980
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)clk_hdmi.in_clk,(MASTER)custom_reset_synchronizer.clock_out,(SLAVE)alt_vip_cl_vfb_hdmi.main_clock,(SLAVE)hdmi_mm_bridge.clk,(SLAVE)alt_vip_cl_cvo_hdmi.main_clock) 1 8 3 3360 2120 3610 1900 3940
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)pll_stream.reconfig_to_pll,(SLAVE)pll_stream_reconfig.reconfig_to_pll) 1 5 2 2050 2220 NJ
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)pll_reset_conduit.output_reset,(SLAVE)pll_stream.reset) 1 6 1 2630
+preplace netloc EXPORT<net_container>soc_system</net_container>(MASTER)soc_system.hps_0_h2f_reset,(MASTER)hps_reset.out_reset) 1 5 10 NJ 1720 NJ 1720 NJ 1720 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)button_pio.external_connection,(SLAVE)soc_system.button_pio) 1 0 12 NJ 40 NJ 40 NJ 40 NJ 40 NJ 40 NJ 40 NJ 60 NJ 60 NJ 60 NJ 60 NJ 60 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)arduino_gpio.external_connection,(SLAVE)soc_system.arduino_gpio) 1 0 6 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.ctrl_reg,(SLAVE)ctrl_register.external_connection) 1 0 14 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 300 NJ
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)alt_vip_cl_cvo_hdmi.main_clock,(SLAVE)clk_hdmi.in_clk,(MASTER)custom_reset_synchronizer.clock_out,(SLAVE)hdmi_mm_bridge.clk,(SLAVE)alt_vip_cl_vfb_hdmi.main_clock) 1 8 3 3260 2070 3510 1880 3940
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)hdmi_mm_bridge.s0,(SLAVE)gpio_0_a.s1,(SLAVE)chip_id_read_mm_0.s0,(SLAVE)locked_pio.s1,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)led_pio.s1,(SLAVE)dipsw_pio.s1,(SLAVE)arduino_gpio.s1,(SLAVE)button_pio.s1,(SLAVE)gpio_1_a.s1,(SLAVE)cvo_reset_pio.s1,(SLAVE)sysid_qsys.control_slave,(SLAVE)pll_stream_reconfig.mgmt_avalon_slave,(SLAVE)pll_reset_pio.s1,(SLAVE)gpio_1_b.s1,(MASTER)lw_mm_bridge.m0,(SLAVE)gpio_0_b.s1) 1 5 7 2110 440 NJ 560 NJ 560 3300 300 NJ 300 NJ 300 4210
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)hps_0.f2h_axi_clock,(MASTER)hps_0.h2f_user0_clock,(SLAVE)hps_0.f2h_sdram0_clock,(SLAVE)alt_vip_cl_vfb_hdmi.mem_clock) 1 9 4 3650 1920 NJ 1900 4470 1120 4980
 preplace netloc EXPORT<net_container>soc_system</net_container>(MASTER)hps_0.spim0_sclk_out,(MASTER)soc_system.hps_0_spim0_sclk_out) 1 12 3 NJ 1070 NJ 1070 NJ
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)gpio_0_b.external_connection,(SLAVE)soc_system.gpio_0_b) 1 0 6 NJ 240 NJ 240 NJ 240 NJ 240 NJ 240 NJ
-preplace netloc INTERCONNECT<net_container>soc_system</net_container>(MASTER)hps_0.h2f_reset,(SLAVE)clk_0.clk_in_reset,(MASTER)por.reset,(SLAVE)hps_reset.in_reset) 1 0 13 230 950 NJ 950 840 570 NJ 570 1480 590 NJ 760 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 740 4840
-levelinfo -pg 1 0 200 5510
-levelinfo -hier soc_system 210 260 730 960 1400 1610 2350 2880 3100 3360 3700 4090 4650 5010 5190 5350
+levelinfo -pg 1 0 200 5630
+levelinfo -hier soc_system 210 260 730 960 1400 1610 2350 2880 3100 3420 3780 4190 4790 5130 5310 5470

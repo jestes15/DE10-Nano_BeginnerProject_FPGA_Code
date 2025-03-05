@@ -1,6 +1,6 @@
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate C:\Users\estes\Downloads\DE10-Nano_v.1.0.0_HWrevE_SystemCD\Demonstrations\SoC_FPGA\DE10_NANO_SoC_FB\soc_system.qsys --synthesis=VERILOG --output-directory=C:\Users\estes\Downloads\DE10-Nano_v.1.0.0_HWrevE_SystemCD\Demonstrations\SoC_FPGA\DE10_NANO_SoC_FB\soc_system\synthesis --family="Cyclone V" --part=5CSEBA6U23I7
-Progress: Loading DE10_NANO_SoC_FB/soc_system.qsys
+Info: qsys-generate C:\Users\estes\Downloads\DE10-Nano_v.1.0.0_HWrevE_SystemCD\Demonstrations\SoC_FPGA\de10_nano\soc_system.qsys --synthesis=VERILOG --output-directory=C:\Users\estes\Downloads\DE10-Nano_v.1.0.0_HWrevE_SystemCD\Demonstrations\SoC_FPGA\de10_nano\soc_system\synthesis --family="Cyclone V" --part=5CSEBA6U23I7
+Progress: Loading de10_nano/soc_system.qsys
 Progress: Reading input file
 Progress: Adding alt_vip_cl_cvo_hdmi [alt_vip_cl_cvo 18.1]
 Progress: Parameterizing module alt_vip_cl_cvo_hdmi
@@ -30,6 +30,10 @@ Progress: Adding cvo_reset_pio [altera_avalon_pio 18.1]
 Progress: Parameterizing module cvo_reset_pio
 Progress: Adding dipsw_pio [altera_avalon_pio 18.1]
 Progress: Parameterizing module dipsw_pio
+Progress: Adding f2sdram_only_master [altera_jtag_avalon_master 18.1]
+Progress: Parameterizing module f2sdram_only_master
+Progress: Adding fpga_only_master [altera_jtag_avalon_master 18.1]
+Progress: Parameterizing module fpga_only_master
 Progress: Adding gpio_0_a [altera_avalon_pio 18.1]
 Progress: Parameterizing module gpio_0_a
 Progress: Adding gpio_0_b [altera_avalon_pio 18.1]
@@ -42,6 +46,8 @@ Progress: Adding hdmi_mm_bridge [altera_avalon_mm_bridge 18.1]
 Progress: Parameterizing module hdmi_mm_bridge
 Progress: Adding hps_0 [altera_hps 18.1]
 Progress: Parameterizing module hps_0
+Progress: Adding hps_only_master [altera_jtag_avalon_master 18.1]
+Progress: Parameterizing module hps_only_master
 Progress: Adding hps_reset [altera_reset_bridge 18.1]
 Progress: Parameterizing module hps_reset
 Progress: Adding jtag_uart [altera_avalon_jtag_uart 18.1]
@@ -101,8 +107,14 @@ Info: soc_system: Generating soc_system "soc_system" for QUARTUS_SYNTH
 Info: Interconnect is inserted between master hps_0.h2f_lw_axi_master and slave lw_mm_bridge.s0 because the master is of type axi and the slave is of type avalon.
 Info: Inserting clock-crossing logic between cmd_demux.src4 and cmd_mux_004.sink0
 Info: Inserting clock-crossing logic between rsp_demux_004.src0 and rsp_mux.sink4
-Info: Interconnect is inserted between master alt_vip_cl_vfb_hdmi.mem_master_rd and slave hps_0.f2h_sdram0_data because the master has address signal 32 bit wide, but the slave is 27 bit wide.
-Info: Interconnect is inserted between master alt_vip_cl_vfb_hdmi.mem_master_rd and slave hps_0.f2h_sdram0_data because the master has burstcount signal 6 bit wide, but the slave is 8 bit wide.
+Info: Interconnect is inserted between master hps_only_master.master and slave hps_0.f2h_axi_slave because the master is of type avalon and the slave is of type axi.
+Info: Interconnect is inserted between master hps_only_master.master and slave hps_0.f2h_axi_slave because they have different clock source.
+Info: Inserting clock-crossing logic between cmd_demux.src0 and cmd_mux.sink0
+Info: Inserting clock-crossing logic between cmd_demux.src1 and cmd_mux_001.sink0
+Info: Inserting clock-crossing logic between rsp_demux.src0 and rsp_mux.sink0
+Info: Inserting clock-crossing logic between rsp_demux_001.src0 and rsp_mux.sink1
+Info: Inserting clock-crossing logic between cmd_demux.src0 and cmd_mux.sink0
+Info: Inserting clock-crossing logic between rsp_demux.src0 and rsp_mux.sink0
 Warning: hps_0.f2h_irq0: Cannot connect clock for irq_mapper.sender
 Warning: hps_0.f2h_irq0: Cannot connect reset for irq_mapper.sender
 Warning: hps_0.f2h_irq1: Cannot connect clock for irq_mapper_001.sender
@@ -113,30 +125,31 @@ Info: alt_vip_cl_vfb_hdmi: "soc_system" instantiated alt_vip_cl_vfb "alt_vip_cl_
 Info: altchip_id_0: generating top-level entity altchip_id
 Info: altchip_id_0: "soc_system" instantiated altchip_id "altchip_id_0"
 Info: arduino_gpio: Starting RTL generation for module 'soc_system_arduino_gpio'
-Info: arduino_gpio:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_arduino_gpio --dir=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0003_arduino_gpio_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0003_arduino_gpio_gen//soc_system_arduino_gpio_component_configuration.pl  --do_build_sim=0  ]
+Info: arduino_gpio:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_arduino_gpio --dir=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0003_arduino_gpio_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0003_arduino_gpio_gen//soc_system_arduino_gpio_component_configuration.pl  --do_build_sim=0  ]
 Info: arduino_gpio: Done RTL generation for module 'soc_system_arduino_gpio'
 Info: arduino_gpio: "soc_system" instantiated altera_avalon_pio "arduino_gpio"
 Info: button_pio: Starting RTL generation for module 'soc_system_button_pio'
-Info: button_pio:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_button_pio --dir=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0004_button_pio_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0004_button_pio_gen//soc_system_button_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: button_pio:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_button_pio --dir=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0004_button_pio_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0004_button_pio_gen//soc_system_button_pio_component_configuration.pl  --do_build_sim=0  ]
 Info: button_pio: Done RTL generation for module 'soc_system_button_pio'
 Info: button_pio: "soc_system" instantiated altera_avalon_pio "button_pio"
 Info: chip_id_read_mm_0: "soc_system" instantiated chip_id_read_mm "chip_id_read_mm_0"
 Info: ctrl_register: Starting RTL generation for module 'soc_system_ctrl_register'
-Info: ctrl_register:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_ctrl_register --dir=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0006_ctrl_register_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0006_ctrl_register_gen//soc_system_ctrl_register_component_configuration.pl  --do_build_sim=0  ]
+Info: ctrl_register:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_ctrl_register --dir=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0006_ctrl_register_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0006_ctrl_register_gen//soc_system_ctrl_register_component_configuration.pl  --do_build_sim=0  ]
 Info: ctrl_register: Done RTL generation for module 'soc_system_ctrl_register'
 Info: ctrl_register: "soc_system" instantiated altera_avalon_pio "ctrl_register"
 Info: custom_ip_bridge: "soc_system" instantiated altera_avalon_mm_bridge "custom_ip_bridge"
 Info: custom_reset_synchronizer: "soc_system" instantiated custom_reset_synchronizer "custom_reset_synchronizer"
 Info: cvo_reset_pio: Starting RTL generation for module 'soc_system_cvo_reset_pio'
-Info: cvo_reset_pio:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_cvo_reset_pio --dir=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0009_cvo_reset_pio_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0009_cvo_reset_pio_gen//soc_system_cvo_reset_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: cvo_reset_pio:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_cvo_reset_pio --dir=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0009_cvo_reset_pio_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0009_cvo_reset_pio_gen//soc_system_cvo_reset_pio_component_configuration.pl  --do_build_sim=0  ]
 Info: cvo_reset_pio: Done RTL generation for module 'soc_system_cvo_reset_pio'
 Info: cvo_reset_pio: "soc_system" instantiated altera_avalon_pio "cvo_reset_pio"
 Info: dipsw_pio: Starting RTL generation for module 'soc_system_dipsw_pio'
-Info: dipsw_pio:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_dipsw_pio --dir=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0010_dipsw_pio_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0010_dipsw_pio_gen//soc_system_dipsw_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: dipsw_pio:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_dipsw_pio --dir=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0010_dipsw_pio_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0010_dipsw_pio_gen//soc_system_dipsw_pio_component_configuration.pl  --do_build_sim=0  ]
 Info: dipsw_pio: Done RTL generation for module 'soc_system_dipsw_pio'
 Info: dipsw_pio: "soc_system" instantiated altera_avalon_pio "dipsw_pio"
+Info: f2sdram_only_master: "soc_system" instantiated altera_jtag_avalon_master "f2sdram_only_master"
 Info: gpio_0_a: Starting RTL generation for module 'soc_system_gpio_0_a'
-Info: gpio_0_a:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_gpio_0_a --dir=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0011_gpio_0_a_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0011_gpio_0_a_gen//soc_system_gpio_0_a_component_configuration.pl  --do_build_sim=0  ]
+Info: gpio_0_a:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_gpio_0_a --dir=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0011_gpio_0_a_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0011_gpio_0_a_gen//soc_system_gpio_0_a_component_configuration.pl  --do_build_sim=0  ]
 Info: gpio_0_a: Done RTL generation for module 'soc_system_gpio_0_a'
 Info: gpio_0_a: "soc_system" instantiated altera_avalon_pio "gpio_0_a"
 Info: hps_0: "Running  for module: hps_0"
@@ -144,23 +157,23 @@ Info: hps_0: HPS Main PLL counter settings: n = 0  m = 63
 Info: hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
 Info: hps_0: "soc_system" instantiated altera_hps "hps_0"
 Info: jtag_uart: Starting RTL generation for module 'soc_system_jtag_uart'
-Info: jtag_uart:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_system_jtag_uart --dir=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0012_jtag_uart_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0012_jtag_uart_gen//soc_system_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_system_jtag_uart --dir=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0012_jtag_uart_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0012_jtag_uart_gen//soc_system_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart: Done RTL generation for module 'soc_system_jtag_uart'
 Info: jtag_uart: "soc_system" instantiated altera_avalon_jtag_uart "jtag_uart"
 Info: led_pio: Starting RTL generation for module 'soc_system_led_pio'
-Info: led_pio:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_led_pio --dir=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0013_led_pio_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0013_led_pio_gen//soc_system_led_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: led_pio:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_led_pio --dir=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0013_led_pio_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0013_led_pio_gen//soc_system_led_pio_component_configuration.pl  --do_build_sim=0  ]
 Info: led_pio: Done RTL generation for module 'soc_system_led_pio'
 Info: led_pio: "soc_system" instantiated altera_avalon_pio "led_pio"
 Info: lfsr_reset_value_reg: Starting RTL generation for module 'soc_system_lfsr_reset_value_reg'
-Info: lfsr_reset_value_reg:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_lfsr_reset_value_reg --dir=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0014_lfsr_reset_value_reg_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0014_lfsr_reset_value_reg_gen//soc_system_lfsr_reset_value_reg_component_configuration.pl  --do_build_sim=0  ]
+Info: lfsr_reset_value_reg:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_lfsr_reset_value_reg --dir=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0014_lfsr_reset_value_reg_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0014_lfsr_reset_value_reg_gen//soc_system_lfsr_reset_value_reg_component_configuration.pl  --do_build_sim=0  ]
 Info: lfsr_reset_value_reg: Done RTL generation for module 'soc_system_lfsr_reset_value_reg'
 Info: lfsr_reset_value_reg: "soc_system" instantiated altera_avalon_pio "lfsr_reset_value_reg"
 Info: locked_pio: Starting RTL generation for module 'soc_system_locked_pio'
-Info: locked_pio:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_locked_pio --dir=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0015_locked_pio_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0015_locked_pio_gen//soc_system_locked_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: locked_pio:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_locked_pio --dir=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0015_locked_pio_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0015_locked_pio_gen//soc_system_locked_pio_component_configuration.pl  --do_build_sim=0  ]
 Info: locked_pio: Done RTL generation for module 'soc_system_locked_pio'
 Info: locked_pio: "soc_system" instantiated altera_avalon_pio "locked_pio"
 Info: onchip_memory2_0: Starting RTL generation for module 'soc_system_onchip_memory2_0'
-Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_system_onchip_memory2_0 --dir=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0016_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0016_onchip_memory2_0_gen//soc_system_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_system_onchip_memory2_0 --dir=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0016_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0016_onchip_memory2_0_gen//soc_system_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
 Info: onchip_memory2_0: Done RTL generation for module 'soc_system_onchip_memory2_0'
 Info: onchip_memory2_0: "soc_system" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
 Info: pll_stream: "soc_system" instantiated altera_pll "pll_stream"
@@ -168,7 +181,7 @@ Warning: quartus_synth: A Duplicate file was overwritten with path: altera_pll_r
 Info: pll_stream_reconfig: "soc_system" instantiated altera_pll_reconfig "pll_stream_reconfig"
 Info: por: "soc_system" instantiated power_on_reset "por"
 Info: random: Starting RTL generation for module 'soc_system_random'
-Info: random:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_random --dir=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0020_random_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0151_4991023637303232807.dir/0020_random_gen//soc_system_random_component_configuration.pl  --do_build_sim=0  ]
+Info: random:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_random --dir=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0020_random_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/estes/AppData/Local/Temp/alt0152_7048322219859288882.dir/0020_random_gen//soc_system_random_component_configuration.pl  --do_build_sim=0  ]
 Info: random: Done RTL generation for module 'soc_system_random'
 Info: random: "soc_system" instantiated altera_avalon_pio "random"
 Info: sysid_qsys: "soc_system" instantiated altera_avalon_sysid_qsys "sysid_qsys"
@@ -193,13 +206,13 @@ Info: avalon_st_adapter_012: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_013: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_014: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_015: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_016: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_017: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_018: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_2: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_2"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_3: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_3"
-Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_4: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_4"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_5: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_5"
@@ -210,116 +223,147 @@ Info: rst_controller: "soc_system" instantiated altera_reset_controller "rst_con
 Info: video_in: "alt_vip_cl_cvo_hdmi" instantiated alt_vip_video_input_bridge "video_in"
 Info: scheduler: "alt_vip_cl_cvo_hdmi" instantiated alt_vip_cvo_scheduler "scheduler"
 Info: sop_align: "alt_vip_cl_cvo_hdmi" instantiated alt_vip_pip_sop_realign "sop_align"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
 Info: cvo_core: "alt_vip_cl_cvo_hdmi" instantiated alt_vip_cvo_core "cvo_core"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
 Info: control: "alt_vip_cl_cvo_hdmi" instantiated alt_vip_control_slave "control"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
 Info: rd_ctrl: "alt_vip_cl_vfb_hdmi" instantiated alt_vip_vfb_rd_ctrl "rd_ctrl"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
 Info: video_out: "alt_vip_cl_vfb_hdmi" instantiated alt_vip_video_output_bridge "video_out"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/modules/alt_vip_common_sop_align/src_hdl/alt_vip_common_sop_align.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/modules/alt_vip_common_sop_align/src_hdl/alt_vip_common_sop_align.sv
 Info: pkt_trans_rd: "alt_vip_cl_vfb_hdmi" instantiated alt_vip_packet_transfer "pkt_trans_rd"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
 Info: sync_ctrl: "alt_vip_cl_vfb_hdmi" instantiated alt_vip_vfb_sync_ctrl "sync_ctrl"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
+Info: jtag_phy_embedded_in_jtag_master: "f2sdram_only_master" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: timing_adt: "f2sdram_only_master" instantiated timing_adapter "timing_adt"
+Info: fifo: "f2sdram_only_master" instantiated altera_avalon_sc_fifo "fifo"
+Info: b2p: "f2sdram_only_master" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "f2sdram_only_master" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "f2sdram_only_master" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: "f2sdram_only_master" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: "f2sdram_only_master" instantiated channel_adapter "p2b_adapter"
 Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
 Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
 Info: custom_ip_bridge_s0_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "custom_ip_bridge_s0_translator"
 Info: hps_0_h2f_axi_master_agent: "mm_interconnect_0" instantiated altera_merlin_axi_master_ni "hps_0_h2f_axi_master_agent"
 Info: custom_ip_bridge_s0_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "custom_ip_bridge_s0_agent"
-Info: custom_ip_bridge_s0_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "custom_ip_bridge_s0_agent_rsp_fifo"
 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
 Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
 Info: hps_0_h2f_axi_master_wr_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "hps_0_h2f_axi_master_wr_limiter"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
 Info: custom_ip_bridge_s0_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "custom_ip_bridge_s0_burst_adapter"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: custom_ip_bridge_s0_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "custom_ip_bridge_s0_rsp_width_adapter"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
 Info: router_002: "mm_interconnect_1" instantiated altera_merlin_router "router_002"
 Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: lw_mm_bridge_m0_translator: "mm_interconnect_2" instantiated altera_merlin_master_translator "lw_mm_bridge_m0_translator"
 Info: lw_mm_bridge_m0_agent: "mm_interconnect_2" instantiated altera_merlin_master_agent "lw_mm_bridge_m0_agent"
 Info: router: "mm_interconnect_2" instantiated altera_merlin_router "router"
 Info: router_001: "mm_interconnect_2" instantiated altera_merlin_router "router_001"
-Info: router_004: "mm_interconnect_2" instantiated altera_merlin_router "router_004"
+Info: router_002: "mm_interconnect_2" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_2" instantiated altera_merlin_router "router_003"
+Info: router_005: "mm_interconnect_2" instantiated altera_merlin_router "router_005"
+Info: router_006: "mm_interconnect_2" instantiated altera_merlin_router "router_006"
+Info: router_019: "mm_interconnect_2" instantiated altera_merlin_router "router_019"
 Info: cmd_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_demux_002: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "cmd_demux_002"
 Info: cmd_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "cmd_mux"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_002: "mm_interconnect_2" instantiated altera_merlin_multiplexer "cmd_mux_002"
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_002: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "rsp_demux_002"
 Info: rsp_demux_004: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "rsp_demux_004"
 Info: rsp_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_2" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_002: "mm_interconnect_2" instantiated altera_merlin_multiplexer "rsp_mux_002"
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: crosser: "mm_interconnect_2" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_avalon_st_clock_crosser.v
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_std_synchronizer_nocut.v
 Info: avalon_st_adapter_003: "mm_interconnect_2" instantiated altera_avalon_st_adapter "avalon_st_adapter_003"
 Info: router: "mm_interconnect_3" instantiated altera_merlin_router "router"
 Info: router_001: "mm_interconnect_3" instantiated altera_merlin_router "router_001"
 Info: cmd_demux: "mm_interconnect_3" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_mux: "mm_interconnect_3" instantiated altera_merlin_multiplexer "cmd_mux"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_3" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_3" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: hps_0_f2h_axi_slave_agent: "mm_interconnect_4" instantiated altera_merlin_axi_slave_ni "hps_0_f2h_axi_slave_agent"
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
 Info: router: "mm_interconnect_4" instantiated altera_merlin_router "router"
 Info: router_001: "mm_interconnect_4" instantiated altera_merlin_router "router_001"
 Info: cmd_demux: "mm_interconnect_4" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_mux: "mm_interconnect_4" instantiated altera_merlin_multiplexer "cmd_mux"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_4" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_4" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: router: "mm_interconnect_5" instantiated altera_merlin_router "router"
 Info: router_001: "mm_interconnect_5" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_5" instantiated altera_merlin_router "router_002"
 Info: cmd_demux: "mm_interconnect_5" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_5" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_mux: "mm_interconnect_5" instantiated altera_merlin_multiplexer "cmd_mux"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_5" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_5" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_5" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: timing_adapter_0: "avalon_st_adapter" instantiated timing_adapter "timing_adapter_0"
 Info: vid_front: "video_in" instantiated alt_vip_video_input_bridge_resp "vid_front"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
 Info: vid_back: "video_in" instantiated alt_vip_video_input_bridge_cmd "vid_back"
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
-Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/DE10_NANO_SoC_FB/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
+Info: Reusing file C:/Users/estes/Downloads/DE10-Nano_v.1.0.0_HWrevE_SystemCD/Demonstrations/SoC_FPGA/de10_nano/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
 Info: border: "hps_io" instantiated altera_interface_generator "border"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
 Info: error_adapter_0: "avalon_st_adapter_003" instantiated error_adapter "error_adapter_0"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: soc_system: Done "soc_system" with 102 modules, 212 files
+Info: soc_system: Done "soc_system" with 124 modules, 240 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis
