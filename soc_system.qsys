@@ -9,6 +9,54 @@
    categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
+   element AIDR
+   {
+      datum _sortIndex
+      {
+         value = "60";
+         type = "int";
+      }
+   }
+   element AIDR.s1
+   {
+      datum baseAddress
+      {
+         value = "352";
+         type = "String";
+      }
+   }
+   element CCSIDR
+   {
+      datum _sortIndex
+      {
+         value = "58";
+         type = "int";
+      }
+   }
+   element CCSIDR.s1
+   {
+      datum baseAddress
+      {
+         value = "320";
+         type = "String";
+      }
+   }
+   element CLIDR
+   {
+      datum _sortIndex
+      {
+         value = "59";
+         type = "int";
+      }
+   }
+   element CLIDR.s1
+   {
+      datum baseAddress
+      {
+         value = "336";
+         type = "String";
+      }
+   }
    element CPUID_RegBridge
    {
       datum _sortIndex
@@ -25,11 +73,43 @@
          type = "String";
       }
    }
+   element CSSELR
+   {
+      datum _sortIndex
+      {
+         value = "61";
+         type = "int";
+      }
+   }
+   element CSSELR.s1
+   {
+      datum baseAddress
+      {
+         value = "368";
+         type = "String";
+      }
+   }
+   element CTR
+   {
+      datum _sortIndex
+      {
+         value = "39";
+         type = "int";
+      }
+   }
+   element CTR.s1
+   {
+      datum baseAddress
+      {
+         value = "16";
+         type = "String";
+      }
+   }
    element ID_AFR0
    {
       datum _sortIndex
       {
-         value = "41";
+         value = "47";
          type = "int";
       }
    }
@@ -37,11 +117,267 @@
    {
       datum baseAddress
       {
-         value = "48";
+         value = "144";
          type = "String";
       }
    }
-   element ID_DFR0
+   element ID_ISAR0
+   {
+      datum _sortIndex
+      {
+         value = "52";
+         type = "int";
+      }
+   }
+   element ID_ISAR0.s1
+   {
+      datum baseAddress
+      {
+         value = "224";
+         type = "String";
+      }
+   }
+   element ID_ISAR1
+   {
+      datum _sortIndex
+      {
+         value = "53";
+         type = "int";
+      }
+   }
+   element ID_ISAR1.s1
+   {
+      datum baseAddress
+      {
+         value = "240";
+         type = "String";
+      }
+   }
+   element ID_ISAR2
+   {
+      datum _sortIndex
+      {
+         value = "54";
+         type = "int";
+      }
+   }
+   element ID_ISAR2.s1
+   {
+      datum baseAddress
+      {
+         value = "256";
+         type = "String";
+      }
+   }
+   element ID_ISAR3
+   {
+      datum _sortIndex
+      {
+         value = "55";
+         type = "int";
+      }
+   }
+   element ID_ISAR3.s1
+   {
+      datum baseAddress
+      {
+         value = "272";
+         type = "String";
+      }
+   }
+   element ID_ISAR4
+   {
+      datum _sortIndex
+      {
+         value = "56";
+         type = "int";
+      }
+   }
+   element ID_ISAR4.s1
+   {
+      datum baseAddress
+      {
+         value = "288";
+         type = "String";
+      }
+   }
+   element ID_ISAR5
+   {
+      datum _sortIndex
+      {
+         value = "57";
+         type = "int";
+      }
+   }
+   element ID_ISAR5.s1
+   {
+      datum baseAddress
+      {
+         value = "304";
+         type = "String";
+      }
+   }
+   element ID_PFR0
+   {
+      datum _sortIndex
+      {
+         value = "44";
+         type = "int";
+      }
+   }
+   element ID_PFR0.s1
+   {
+      datum baseAddress
+      {
+         value = "96";
+         type = "String";
+      }
+   }
+   element ID_PFR1
+   {
+      datum _sortIndex
+      {
+         value = "45";
+         type = "int";
+      }
+   }
+   element ID_PFR1.s1
+   {
+      datum baseAddress
+      {
+         value = "112";
+         type = "String";
+      }
+   }
+   element IF_DFR0
+   {
+      datum _sortIndex
+      {
+         value = "46";
+         type = "int";
+      }
+   }
+   element IF_DFR0.s1
+   {
+      datum baseAddress
+      {
+         value = "128";
+         type = "String";
+      }
+   }
+   element IF_MMFR0
+   {
+      datum _sortIndex
+      {
+         value = "48";
+         type = "int";
+      }
+   }
+   element IF_MMFR0.s1
+   {
+      datum baseAddress
+      {
+         value = "160";
+         type = "String";
+      }
+   }
+   element IF_MMFR1
+   {
+      datum _sortIndex
+      {
+         value = "49";
+         type = "int";
+      }
+   }
+   element IF_MMFR1.s1
+   {
+      datum baseAddress
+      {
+         value = "176";
+         type = "String";
+      }
+   }
+   element IF_MMFR2
+   {
+      datum _sortIndex
+      {
+         value = "50";
+         type = "int";
+      }
+   }
+   element IF_MMFR2.s1
+   {
+      datum baseAddress
+      {
+         value = "192";
+         type = "String";
+      }
+   }
+   element IF_MMFR3
+   {
+      datum _sortIndex
+      {
+         value = "51";
+         type = "int";
+      }
+   }
+   element IF_MMFR3.s1
+   {
+      datum baseAddress
+      {
+         value = "208";
+         type = "String";
+      }
+   }
+   element MIDR
+   {
+      datum _sortIndex
+      {
+         value = "38";
+         type = "int";
+      }
+   }
+   element MIDR.reset
+   {
+      datum _tags
+      {
+         value = "";
+         type = "String";
+      }
+   }
+   element MPIDR
+   {
+      datum _sortIndex
+      {
+         value = "42";
+         type = "int";
+      }
+   }
+   element MPIDR.s1
+   {
+      datum baseAddress
+      {
+         value = "64";
+         type = "String";
+      }
+   }
+   element REVIDR
+   {
+      datum _sortIndex
+      {
+         value = "43";
+         type = "int";
+      }
+   }
+   element REVIDR.s1
+   {
+      datum baseAddress
+      {
+         value = "80";
+         type = "String";
+      }
+   }
+   element TCMTR
    {
       datum _sortIndex
       {
@@ -54,7 +390,7 @@
          type = "boolean";
       }
    }
-   element ID_DFR0.s1
+   element TCMTR.s1
    {
       datum baseAddress
       {
@@ -62,227 +398,51 @@
          type = "String";
       }
    }
-   element ID_ISAR0
+   element TLBTR
    {
       datum _sortIndex
       {
-         value = "46";
+         value = "41";
          type = "int";
       }
    }
-   element ID_ISAR0.s1
+   element TLBTR.s1
    {
       datum baseAddress
-      {
-         value = "128";
-         type = "String";
-      }
-   }
-   element ID_ISAR1
-   {
-      datum _sortIndex
-      {
-         value = "47";
-         type = "int";
-      }
-   }
-   element ID_ISAR1.s1
-   {
-      datum baseAddress
-      {
-         value = "144";
-         type = "String";
-      }
-   }
-   element ID_ISAR2
-   {
-      datum _sortIndex
       {
          value = "48";
-         type = "int";
-      }
-   }
-   element ID_ISAR2.s1
-   {
-      datum baseAddress
-      {
-         value = "160";
          type = "String";
       }
    }
-   element ID_ISAR3
+   element VMPIDR
    {
       datum _sortIndex
       {
-         value = "49";
+         value = "63";
          type = "int";
       }
    }
-   element ID_ISAR3.s1
+   element VMPIDR.s1
    {
       datum baseAddress
       {
-         value = "176";
+         value = "400";
          type = "String";
       }
    }
-   element ID_ISAR4
+   element VPIDR
    {
       datum _sortIndex
       {
-         value = "50";
+         value = "62";
          type = "int";
       }
    }
-   element ID_ISAR4.s1
+   element VPIDR.s1
    {
       datum baseAddress
       {
-         value = "192";
-         type = "String";
-      }
-   }
-   element ID_ISAR5
-   {
-      datum _sortIndex
-      {
-         value = "51";
-         type = "int";
-      }
-   }
-   element ID_ISAR5.s1
-   {
-      datum baseAddress
-      {
-         value = "208";
-         type = "String";
-      }
-   }
-   element ID_MMFR0
-   {
-      datum _sortIndex
-      {
-         value = "42";
-         type = "int";
-      }
-   }
-   element ID_MMFR0.s1
-   {
-      datum baseAddress
-      {
-         value = "64";
-         type = "String";
-      }
-   }
-   element ID_MMFR1
-   {
-      datum _sortIndex
-      {
-         value = "43";
-         type = "int";
-      }
-   }
-   element ID_MMFR1.s1
-   {
-      datum baseAddress
-      {
-         value = "80";
-         type = "String";
-      }
-   }
-   element ID_MMFR2
-   {
-      datum _sortIndex
-      {
-         value = "44";
-         type = "int";
-      }
-   }
-   element ID_MMFR2.s1
-   {
-      datum baseAddress
-      {
-         value = "96";
-         type = "String";
-      }
-   }
-   element ID_MMFR3
-   {
-      datum _sortIndex
-      {
-         value = "45";
-         type = "int";
-      }
-   }
-   element ID_MMFR3.s1
-   {
-      datum baseAddress
-      {
-         value = "112";
-         type = "String";
-      }
-   }
-   element ID_PFR0
-   {
-      datum _sortIndex
-      {
-         value = "38";
-         type = "int";
-      }
-   }
-   element ID_PFR0.reset
-   {
-      datum _tags
-      {
-         value = "";
-         type = "String";
-      }
-   }
-   element ID_PFR1
-   {
-      datum _sortIndex
-      {
-         value = "39";
-         type = "int";
-      }
-   }
-   element ID_PFR1.s1
-   {
-      datum baseAddress
-      {
-         value = "16";
-         type = "String";
-      }
-   }
-   element ID_RES0
-   {
-      datum _sortIndex
-      {
-         value = "52";
-         type = "int";
-      }
-   }
-   element ID_RES0.s1
-   {
-      datum baseAddress
-      {
-         value = "224";
-         type = "String";
-      }
-   }
-   element ID_RES1
-   {
-      datum _sortIndex
-      {
-         value = "53";
-         type = "int";
-      }
-   }
-   element ID_RES1.s1
-   {
-      datum baseAddress
-      {
-         value = "240";
+         value = "384";
          type = "String";
       }
    }
@@ -745,6 +905,48 @@
    internal="lfsr_reset_value_reg.external_connection"
    type="conduit"
    dir="end" />
+ <module name="AIDR" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module name="CCSIDR" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module name="CLIDR" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
  <module
    name="CPUID_RegBridge"
    kind="altera_avalon_mm_bridge"
@@ -759,11 +961,11 @@
   <parameter name="PIPELINE_COMMAND" value="1" />
   <parameter name="PIPELINE_RESPONSE" value="1" />
   <parameter name="SYMBOL_WIDTH" value="8" />
-  <parameter name="SYSINFO_ADDR_WIDTH" value="8" />
+  <parameter name="SYSINFO_ADDR_WIDTH" value="9" />
   <parameter name="USE_AUTO_ADDRESS_WIDTH" value="1" />
   <parameter name="USE_RESPONSE" value="0" />
  </module>
- <module name="ID_AFR0" kind="altera_avalon_pio" version="18.1" enabled="1">
+ <module name="CSSELR" kind="altera_avalon_pio" version="18.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
@@ -777,7 +979,21 @@
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="32" />
  </module>
- <module name="ID_DFR0" kind="altera_avalon_pio" version="18.1" enabled="1">
+ <module name="CTR" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module name="ID_AFR0" kind="altera_avalon_pio" version="18.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
@@ -875,62 +1091,6 @@
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="32" />
  </module>
- <module name="ID_MMFR0" kind="altera_avalon_pio" version="18.1" enabled="1">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
-  <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
-  <parameter name="clockRate" value="50000000" />
-  <parameter name="direction" value="Output" />
-  <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
-  <parameter name="irqType" value="LEVEL" />
-  <parameter name="resetValue" value="0" />
-  <parameter name="simDoTestBenchWiring" value="false" />
-  <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="32" />
- </module>
- <module name="ID_MMFR1" kind="altera_avalon_pio" version="18.1" enabled="1">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
-  <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
-  <parameter name="clockRate" value="50000000" />
-  <parameter name="direction" value="Output" />
-  <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
-  <parameter name="irqType" value="LEVEL" />
-  <parameter name="resetValue" value="0" />
-  <parameter name="simDoTestBenchWiring" value="false" />
-  <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="32" />
- </module>
- <module name="ID_MMFR2" kind="altera_avalon_pio" version="18.1" enabled="1">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
-  <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
-  <parameter name="clockRate" value="50000000" />
-  <parameter name="direction" value="Output" />
-  <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
-  <parameter name="irqType" value="LEVEL" />
-  <parameter name="resetValue" value="0" />
-  <parameter name="simDoTestBenchWiring" value="false" />
-  <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="32" />
- </module>
- <module name="ID_MMFR3" kind="altera_avalon_pio" version="18.1" enabled="1">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
-  <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
-  <parameter name="clockRate" value="50000000" />
-  <parameter name="direction" value="Output" />
-  <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
-  <parameter name="irqType" value="LEVEL" />
-  <parameter name="resetValue" value="0" />
-  <parameter name="simDoTestBenchWiring" value="false" />
-  <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="32" />
- </module>
  <module name="ID_PFR0" kind="altera_avalon_pio" version="18.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
@@ -959,7 +1119,7 @@
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="32" />
  </module>
- <module name="ID_RES0" kind="altera_avalon_pio" version="18.1" enabled="1">
+ <module name="IF_DFR0" kind="altera_avalon_pio" version="18.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
@@ -973,7 +1133,147 @@
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="32" />
  </module>
- <module name="ID_RES1" kind="altera_avalon_pio" version="18.1" enabled="1">
+ <module name="IF_MMFR0" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module name="IF_MMFR1" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module name="IF_MMFR2" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module name="IF_MMFR3" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module name="MIDR" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module name="MPIDR" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module name="REVIDR" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module name="TCMTR" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module name="TLBTR" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module name="VMPIDR" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module name="VPIDR" kind="altera_avalon_pio" version="18.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
@@ -2477,20 +2777,12 @@
   <parameter name="baseAddress" value="0x0020" />
   <parameter name="defaultConnection" value="false" />
  </connection>
- <connection
-   kind="avalon"
-   version="18.1"
-   start="CPUID_RegBridge.m0"
-   end="ID_PFR0.s1">
+ <connection kind="avalon" version="18.1" start="CPUID_RegBridge.m0" end="MIDR.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
- <connection
-   kind="avalon"
-   version="18.1"
-   start="CPUID_RegBridge.m0"
-   end="ID_PFR1.s1">
+ <connection kind="avalon" version="18.1" start="CPUID_RegBridge.m0" end="CTR.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0010" />
   <parameter name="defaultConnection" value="false" />
@@ -2499,7 +2791,7 @@
    kind="avalon"
    version="18.1"
    start="CPUID_RegBridge.m0"
-   end="ID_DFR0.s1">
+   end="TCMTR.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0020" />
   <parameter name="defaultConnection" value="false" />
@@ -2508,7 +2800,7 @@
    kind="avalon"
    version="18.1"
    start="CPUID_RegBridge.m0"
-   end="ID_AFR0.s1">
+   end="TLBTR.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0030" />
   <parameter name="defaultConnection" value="false" />
@@ -2517,7 +2809,7 @@
    kind="avalon"
    version="18.1"
    start="CPUID_RegBridge.m0"
-   end="ID_MMFR0.s1">
+   end="MPIDR.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0040" />
   <parameter name="defaultConnection" value="false" />
@@ -2526,7 +2818,7 @@
    kind="avalon"
    version="18.1"
    start="CPUID_RegBridge.m0"
-   end="ID_MMFR1.s1">
+   end="REVIDR.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0050" />
   <parameter name="defaultConnection" value="false" />
@@ -2535,7 +2827,7 @@
    kind="avalon"
    version="18.1"
    start="CPUID_RegBridge.m0"
-   end="ID_MMFR2.s1">
+   end="ID_PFR0.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0060" />
   <parameter name="defaultConnection" value="false" />
@@ -2544,7 +2836,7 @@
    kind="avalon"
    version="18.1"
    start="CPUID_RegBridge.m0"
-   end="ID_MMFR3.s1">
+   end="ID_PFR1.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0070" />
   <parameter name="defaultConnection" value="false" />
@@ -2553,7 +2845,7 @@
    kind="avalon"
    version="18.1"
    start="CPUID_RegBridge.m0"
-   end="ID_ISAR0.s1">
+   end="IF_DFR0.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0080" />
   <parameter name="defaultConnection" value="false" />
@@ -2562,7 +2854,7 @@
    kind="avalon"
    version="18.1"
    start="CPUID_RegBridge.m0"
-   end="ID_ISAR1.s1">
+   end="ID_AFR0.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0090" />
   <parameter name="defaultConnection" value="false" />
@@ -2571,7 +2863,7 @@
    kind="avalon"
    version="18.1"
    start="CPUID_RegBridge.m0"
-   end="ID_ISAR2.s1">
+   end="IF_MMFR0.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00a0" />
   <parameter name="defaultConnection" value="false" />
@@ -2580,7 +2872,7 @@
    kind="avalon"
    version="18.1"
    start="CPUID_RegBridge.m0"
-   end="ID_ISAR3.s1">
+   end="IF_MMFR1.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00b0" />
   <parameter name="defaultConnection" value="false" />
@@ -2589,7 +2881,7 @@
    kind="avalon"
    version="18.1"
    start="CPUID_RegBridge.m0"
-   end="ID_ISAR4.s1">
+   end="IF_MMFR2.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00c0" />
   <parameter name="defaultConnection" value="false" />
@@ -2598,7 +2890,7 @@
    kind="avalon"
    version="18.1"
    start="CPUID_RegBridge.m0"
-   end="ID_ISAR5.s1">
+   end="IF_MMFR3.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00d0" />
   <parameter name="defaultConnection" value="false" />
@@ -2607,7 +2899,7 @@
    kind="avalon"
    version="18.1"
    start="CPUID_RegBridge.m0"
-   end="ID_RES0.s1">
+   end="ID_ISAR0.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00e0" />
   <parameter name="defaultConnection" value="false" />
@@ -2616,9 +2908,95 @@
    kind="avalon"
    version="18.1"
    start="CPUID_RegBridge.m0"
-   end="ID_RES1.s1">
+   end="ID_ISAR1.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00f0" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="CPUID_RegBridge.m0"
+   end="ID_ISAR2.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0100" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="CPUID_RegBridge.m0"
+   end="ID_ISAR3.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0110" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="CPUID_RegBridge.m0"
+   end="ID_ISAR4.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0120" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="CPUID_RegBridge.m0"
+   end="ID_ISAR5.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0130" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="CPUID_RegBridge.m0"
+   end="CCSIDR.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0140" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="CPUID_RegBridge.m0"
+   end="CLIDR.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0150" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection kind="avalon" version="18.1" start="CPUID_RegBridge.m0" end="AIDR.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0160" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="CPUID_RegBridge.m0"
+   end="CSSELR.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0170" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="CPUID_RegBridge.m0"
+   end="VPIDR.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0180" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="CPUID_RegBridge.m0"
+   end="VMPIDR.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0190" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2821,22 +3199,32 @@
    version="18.1"
    start="clk_0.clk"
    end="CPUID_RegBridge.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="MIDR.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="CTR.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="TCMTR.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="TLBTR.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="MPIDR.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="REVIDR.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="ID_PFR0.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="ID_PFR1.clk" />
- <connection kind="clock" version="18.1" start="clk_0.clk" end="ID_DFR0.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="IF_DFR0.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="ID_AFR0.clk" />
- <connection kind="clock" version="18.1" start="clk_0.clk" end="ID_MMFR0.clk" />
- <connection kind="clock" version="18.1" start="clk_0.clk" end="ID_MMFR1.clk" />
- <connection kind="clock" version="18.1" start="clk_0.clk" end="ID_MMFR2.clk" />
- <connection kind="clock" version="18.1" start="clk_0.clk" end="ID_MMFR3.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="IF_MMFR0.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="IF_MMFR1.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="IF_MMFR2.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="IF_MMFR3.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="ID_ISAR0.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="ID_ISAR1.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="ID_ISAR2.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="ID_ISAR3.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="ID_ISAR4.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="ID_ISAR5.clk" />
- <connection kind="clock" version="18.1" start="clk_0.clk" end="ID_RES0.clk" />
- <connection kind="clock" version="18.1" start="clk_0.clk" end="ID_RES1.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="CCSIDR.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="CLIDR.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="AIDR.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="CSSELR.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="VPIDR.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="VMPIDR.clk" />
  <connection
    kind="clock"
    version="18.1"
@@ -3136,61 +3524,27 @@
    version="18.1"
    start="clk_0.clk_reset"
    end="CPUID_RegBridge.reset" />
+ <connection kind="reset" version="18.1" start="clk_0.clk_reset" end="MIDR.reset" />
  <connection
    kind="reset"
    version="18.1"
    start="clk_0.clk_reset"
-   end="ID_PFR0.reset" />
+   end="IF_MMFR3.reset" />
  <connection
    kind="reset"
    version="18.1"
    start="clk_0.clk_reset"
-   end="ID_ISAR5.reset" />
+   end="IF_MMFR2.reset" />
  <connection
    kind="reset"
    version="18.1"
    start="clk_0.clk_reset"
-   end="ID_ISAR4.reset" />
+   end="IF_MMFR1.reset" />
  <connection
    kind="reset"
    version="18.1"
    start="clk_0.clk_reset"
-   end="ID_ISAR3.reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="clk_0.clk_reset"
-   end="ID_ISAR2.reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="clk_0.clk_reset"
-   end="ID_ISAR1.reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="clk_0.clk_reset"
-   end="ID_ISAR0.reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="clk_0.clk_reset"
-   end="ID_MMFR3.reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="clk_0.clk_reset"
-   end="ID_MMFR2.reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="clk_0.clk_reset"
-   end="ID_MMFR1.reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="clk_0.clk_reset"
-   end="ID_MMFR0.reset" />
+   end="IF_MMFR0.reset" />
  <connection
    kind="reset"
    version="18.1"
@@ -3200,7 +3554,7 @@
    kind="reset"
    version="18.1"
    start="clk_0.clk_reset"
-   end="ID_DFR0.reset" />
+   end="IF_DFR0.reset" />
  <connection
    kind="reset"
    version="18.1"
@@ -3210,12 +3564,64 @@
    kind="reset"
    version="18.1"
    start="clk_0.clk_reset"
-   end="ID_RES0.reset" />
+   end="ID_PFR0.reset" />
  <connection
    kind="reset"
    version="18.1"
    start="clk_0.clk_reset"
-   end="ID_RES1.reset" />
+   end="REVIDR.reset" />
+ <connection kind="reset" version="18.1" start="clk_0.clk_reset" end="MPIDR.reset" />
+ <connection kind="reset" version="18.1" start="clk_0.clk_reset" end="TLBTR.reset" />
+ <connection kind="reset" version="18.1" start="clk_0.clk_reset" end="TCMTR.reset" />
+ <connection kind="reset" version="18.1" start="clk_0.clk_reset" end="CTR.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="ID_ISAR0.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="ID_ISAR1.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="VMPIDR.reset" />
+ <connection kind="reset" version="18.1" start="clk_0.clk_reset" end="VPIDR.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="CSSELR.reset" />
+ <connection kind="reset" version="18.1" start="clk_0.clk_reset" end="AIDR.reset" />
+ <connection kind="reset" version="18.1" start="clk_0.clk_reset" end="CLIDR.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="CCSIDR.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="ID_ISAR2.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="ID_ISAR3.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="ID_ISAR4.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="ID_ISAR5.reset" />
  <connection
    kind="reset"
    version="18.1"
