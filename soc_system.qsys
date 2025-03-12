@@ -414,38 +414,6 @@
          type = "String";
       }
    }
-   element VMPIDR
-   {
-      datum _sortIndex
-      {
-         value = "63";
-         type = "int";
-      }
-   }
-   element VMPIDR.s1
-   {
-      datum baseAddress
-      {
-         value = "400";
-         type = "String";
-      }
-   }
-   element VPIDR
-   {
-      datum _sortIndex
-      {
-         value = "62";
-         type = "int";
-      }
-   }
-   element VPIDR.s1
-   {
-      datum baseAddress
-      {
-         value = "384";
-         type = "String";
-      }
-   }
    element alt_vip_cl_cvo_hdmi
    {
       datum _sortIndex
@@ -1246,34 +1214,6 @@
   <parameter name="width" value="32" />
  </module>
  <module name="TLBTR" kind="altera_avalon_pio" version="18.1" enabled="1">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
-  <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
-  <parameter name="clockRate" value="50000000" />
-  <parameter name="direction" value="Output" />
-  <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
-  <parameter name="irqType" value="LEVEL" />
-  <parameter name="resetValue" value="0" />
-  <parameter name="simDoTestBenchWiring" value="false" />
-  <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="32" />
- </module>
- <module name="VMPIDR" kind="altera_avalon_pio" version="18.1" enabled="1">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
-  <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
-  <parameter name="clockRate" value="50000000" />
-  <parameter name="direction" value="Output" />
-  <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
-  <parameter name="irqType" value="LEVEL" />
-  <parameter name="resetValue" value="0" />
-  <parameter name="simDoTestBenchWiring" value="false" />
-  <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="32" />
- </module>
- <module name="VPIDR" kind="altera_avalon_pio" version="18.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
@@ -2984,24 +2924,6 @@
  <connection
    kind="avalon"
    version="18.1"
-   start="CPUID_RegBridge.m0"
-   end="VPIDR.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0180" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="18.1"
-   start="CPUID_RegBridge.m0"
-   end="VMPIDR.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0190" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="18.1"
    start="fpga_only_master.master"
    end="jtag_uart.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
@@ -3223,8 +3145,6 @@
  <connection kind="clock" version="18.1" start="clk_0.clk" end="CLIDR.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="AIDR.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="CSSELR.clk" />
- <connection kind="clock" version="18.1" start="clk_0.clk" end="VPIDR.clk" />
- <connection kind="clock" version="18.1" start="clk_0.clk" end="VMPIDR.clk" />
  <connection
    kind="clock"
    version="18.1"
@@ -3584,12 +3504,6 @@
    version="18.1"
    start="clk_0.clk_reset"
    end="ID_ISAR1.reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="clk_0.clk_reset"
-   end="VMPIDR.reset" />
- <connection kind="reset" version="18.1" start="clk_0.clk_reset" end="VPIDR.reset" />
  <connection
    kind="reset"
    version="18.1"
