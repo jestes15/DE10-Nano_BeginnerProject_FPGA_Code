@@ -288,6 +288,9 @@ $(QUARTUS_RBF): %.rbf: %.sof
 .PHONY: rbf
 rbf: $(QUARTUS_RBF)
 
+HELP_TARGETS += create_rbf
+create_rbf.HELP := Create RBF File
+
 .PHONY: create_rbf
 create_rbf:
 	quartus_cpf -c $(QUARTUS_CPF_ARGS) $(QUARTUS_SOF) $(QUARTUS_RBF)
